@@ -25,7 +25,10 @@ fileprivate let endpointClosure = { (target: RongCloudIMAPIService) -> Endpoint<
 let rongCloudIMAPIProvider = RxMoyaProvider<RongCloudIMAPIService>(endpointClosure: endpointClosure, plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)])
 
 enum RongCloudIMAPIService {
-    case addChat(userId: String, toUserID: String, content: String, houseId: Int, houseName: String)
+    case customerAddChat(userId: String, toUserID: String, content: String, houseId: Int, houseName: String)
+    case agentAddChat(userId: String, toUserID: String, content: String, houseId: Int, houseName: String)
+    case getCustomerUserInfo(userId: String)
+    case getAgentUserInfo(userId: String)
 }
 
 extension RongCloudIMAPIService: TargetType {
@@ -33,14 +36,22 @@ extension RongCloudIMAPIService: TargetType {
     
     var path: String {
         switch self {
-        case .addChat(_):
+        case .customerAddChat(_):
             return "rabbit/v1/im/addChat"
+        case .agentAddChat(_):
+            return "im/addChat"
+        case .getCustomerUserInfo(_):
+            return "rabbit/v1/im/getTargetInfo"
+        case .getAgentUserInfo(_):
+            return "im/getTargetInfo"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .addChat(_):
+        case .customerAddChat(_):
+            return .post
+        case .agentAddChat(_):
             return .post
         default:
             return .get
@@ -49,13 +60,29 @@ extension RongCloudIMAPIService: TargetType {
     
     var parameters: [String: Any]? {
         switch self {
-        case .addChat(let userId, let toUserID, let content, let houseId, let houseName):
+        case .customerAddChat(let userId, let toUserID, let content, let houseId, let houseName):
             return [
                 "userId": userId,
                 "toUserID": toUserID,
                 "content": content,
                 "houseId": houseId,
                 "houseName": houseName
+            ]
+        case .agentAddChat(let userId, let toUserID, let content, let houseId, let houseName):
+            return [
+                "userId": userId,
+                "toUserID": toUserID,
+                "content": content,
+                "houseId": houseId,
+                "houseName": houseName
+            ]
+        case .getAgentUserInfo(let userId):
+            return [
+                "userId": userId
+            ]
+        case .getCustomerUserInfo(let userId):
+            return [
+                "userId": userId
             ]
         default:
             return nil
