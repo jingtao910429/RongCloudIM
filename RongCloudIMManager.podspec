@@ -121,6 +121,7 @@ Pod::Spec.new do |s|
   s.frameworks = 'Foundation'
   s.vendored_frameworks = ['Source/RongCloudIM/RongIMLib.framework', 'Source/RongCloudIM/RongIMKit.framework']
   s.resource_bundles = {'Resources' => 'Source/RongCloudIM/RongCloud.bundle'}
+  s.resources = "Source/RongCloudIM/*.plist"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
