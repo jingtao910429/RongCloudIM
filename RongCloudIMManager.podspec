@@ -119,6 +119,8 @@ Pod::Spec.new do |s|
 
   # s.framework  = "SomeFramework"
   s.frameworks = 'Foundation'
+  s.vendored_frameworks = ['Source/RongCloudIM/RongIMLib.framework', 'Source/RongCloudIM/RongIMKit.framework']
+  s.resource_bundles = {'Resources' => 'Source/RongCloudIM/RongCloud.bundle'}
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
@@ -133,7 +135,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "RongCloudIM/IMKit", "~> 2.8.14"
-  s.dependency "RxWebClient", "~> 0.0.5"
-
+  # s.dependency 'RongCloudIM/IMKit', '~>2.8.14'
+  # s.dependency 'RxWebClient'
 end
