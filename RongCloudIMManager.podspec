@@ -137,8 +137,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency 'RongCloudIM/IMKit', '~>2.8.14'
-  s.dependency 'Moya'
-  s.dependency 'RxSwift'
-  s.dependency 'ObjectMapper'
+   s.dependency 'RongCloudIM/IMKit', '~>2.8.14'
+  # s.dependency 'Moya'
+  # s.dependency 'RxSwift'
+  # s.dependency 'ObjectMapper'
 end
