@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RongCloudIMManager"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "RongCloudIM‘s upper pack of RongCloudIMManager."
 
   # This description is used to generate tags and improve search results.
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Source/*.{h}"
+  s.source_files  = "Source/*.{h}", "Source/RongCloudIM/*.{h}"
   # s.source_files  = "Classes", "Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
@@ -120,7 +120,7 @@ Pod::Spec.new do |s|
 
   # s.framework  = "SomeFramework"
   s.frameworks = 'Foundation'
-  # s.vendored_frameworks = ['Source/RongCloudIM/RongIMLib.framework', 'Source/RongCloudIM/RongIMKit.framework']
+  s.vendored_frameworks = ['Source/RongCloudIM/RongIMLib.framework', 'Source/RongCloudIM/RongIMKit.framework']
   # s.resource_bundles = {'Resources' => 'Source/RongCloudIM/RongCloud.bundle'}
   # s.resources = "Source/RongCloudIM/*.plist", "Source/RongCloudIM/*.lproj"
   # s.vendored_libraries = 'Source/RongCloudIM/libopencore-amrnb.a' #表示依赖第三方/自己的静态库（比如libWeChatSDK.a）
