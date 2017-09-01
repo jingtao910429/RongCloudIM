@@ -95,7 +95,7 @@ Pod::Spec.new do |s|
   # s.exclude_files = "Classes/Exclude"
 
   # s.prefix_header_contents = "#import <RongIMLib/RongIMLib>"
-  # s.public_header_files = "Source/RongCloudIMManager_Bridgin_Header.h"
+  s.public_header_files = "RongCloudManager/Lib/RongCloudIM/*.{h}"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -120,7 +120,7 @@ Pod::Spec.new do |s|
 
   # s.framework  = "SomeFramework"
   s.frameworks = 'Foundation'
-  s.vendored_frameworks = ['Source/RongCloudIM/RongIMLib.framework', 'Source/RongCloudIM/RongIMKit.framework']
+  # s.vendored_frameworks = ['Source/RongCloudIM/RongIMLib.framework', 'Source/RongCloudIM/RongIMKit.framework']
   # s.resource_bundles = {'Resources' => 'Source/RongCloudIM/RongCloud.bundle'}
   # s.resources = "Source/RongCloudIM/*.plist", "Source/RongCloudIM/*.lproj"
   # s.vendored_libraries = 'Source/RongCloudIM/libopencore-amrnb.a' #表示依赖第三方/自己的静态库（比如libWeChatSDK.a）
