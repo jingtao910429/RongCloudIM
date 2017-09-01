@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RongCloudIMManager"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "RongCloudIM‘s upper pack of RongCloudIMManager."
 
   # This description is used to generate tags and improve search results.
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   # , :tag => "#{s.version}" 
-  s.source       = { :git => "https://github.com/jingtao910429/RongCloudIMManager.git"}
+  s.source       = { :git => "https://github.com/jingtao910429/RongCloudIMManager.git", :tag => '0.0.6'}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,12 +90,12 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Source/*.{h}"
+  s.source_files  = "Source/*.{h}", "RongCloudIM/RongIMLib/*.{h}", "RongCloudIM/RongIMKit/*.{h}"
   # s.source_files  = "Classes", "Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.prefix_header_contents = "#import <RongIMLib/RongIMLib>"
-  # s.public_header_files = "Source/RongCloudIMManager_Bridgin_Header.h"
+  # s.public_header_files = "Source/RongCloudIM/RongIMLib/headers/*.{h}", "Source/RongCloudIM/RongIMKit/headers/*.{h}"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -120,13 +120,13 @@ Pod::Spec.new do |s|
 
   # s.framework  = "SomeFramework"
   s.frameworks = 'Foundation'
-  s.vendored_frameworks = ['Source/RongCloudIM/RongIMLib.framework', 'Source/RongCloudIM/RongIMKit.framework']
-  # s.resource_bundles = {'Resources' => 'Source/RongCloudIM/RongCloud.bundle'}
-  # s.resources = "Source/RongCloudIM/*.plist", "Source/RongCloudIM/*.lproj"
-  # s.vendored_libraries = 'Source/RongCloudIM/libopencore-amrnb.a' #表示依赖第三方/自己的静态库（比如libWeChatSDK.a）
+  s.vendored_frameworks = ['RongCloudIM/RongIMLib.framework', 'RongCloudIM/RongIMKit.framework']
+  s.resource_bundles = {'Resources' => 'RongCloudIM/RongCloud.bundle'}
+  s.resources = "RongCloudIM/*.plist", "RongCloudIM/*.lproj"
+  s.vendored_libraries = 'RongCloudIM/libopencore-amrnb.a' #表示依赖第三方/自己的静态库（比如libWeChatSDK.a）
 
   # s.library   = "iconv"
-  # s.libraries = "iconv", "xml2"
+  s.libraries = "sqlite3.0", "c++", "xml2", "stdc++", "z"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -136,7 +136,8 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   s.requires_arc = true
-
+  # , 'LIBRARY_SEARCH_PATHS' =>    '"${PROJECT_DIR}/RongCloudIM/../**'
+  s.xcconfig         = { 'OTHER_LDFLAGS' => '-all_load'}
 
   # s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'RongCloudIMManager-umbrella.h' }
   # s.dependency 'RongCloudIM/IMKit', '~>2.8.14'
