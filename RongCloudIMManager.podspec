@@ -90,11 +90,12 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Source/*.swift"
+  s.source_files  = "Source/*.{h}"
   # s.source_files  = "Classes", "Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "Classes/**/*.h"
+  # s.prefix_header_contents = "#import <RongIMLib/RongIMLib>"
+  # s.public_header_files = "Source/RongCloudIMManager_Bridgin_Header.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -119,8 +120,8 @@ Pod::Spec.new do |s|
 
   # s.framework  = "SomeFramework"
   s.frameworks = 'Foundation'
-  s.vendored_frameworks = ['Source/RongCloudIM/RongIMLib.framework', 'Source/RongCloudIM/RongIMKit.framework']
-  s.resource_bundles = {'Resources' => 'Source/RongCloudIM/RongCloud.bundle'}
+  # s.vendored_frameworks = ['Source/RongCloudIM/RongIMLib.framework', 'Source/RongCloudIM/RongIMKit.framework']
+  # s.resource_bundles = {'Resources' => 'Source/RongCloudIM/RongCloud.bundle'}
   # s.resources = "Source/RongCloudIM/*.plist", "Source/RongCloudIM/*.lproj"
   # s.vendored_libraries = 'Source/RongCloudIM/libopencore-amrnb.a' #表示依赖第三方/自己的静态库（比如libWeChatSDK.a）
 
@@ -136,9 +137,10 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+
+  # s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'RongCloudIMManager-umbrella.h' }
   # s.dependency 'RongCloudIM/IMKit', '~>2.8.14'
-  s.dependency 'Moya'
-  s.dependency 'RxSwift'
-  s.dependency 'ObjectMapper'
+  # s.dependency 'Moya'
+  # s.dependency 'RxSwift'
+  # s.dependency 'ObjectMapper'
 end
