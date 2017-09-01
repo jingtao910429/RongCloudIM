@@ -10,7 +10,7 @@
 #import "RongCloudIMManager.h"
 
 @interface RongCloudIMDataRequest : NSObject
-
+@property (nonatomic, copy)   NSString *token;
 @property (nonatomic, copy)   NSString *targetId;
 @property (nonatomic, copy)   RCUserInfo *sendUserInfo;
 @property (nonatomic, strong) RCMessageContent *content;

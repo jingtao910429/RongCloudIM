@@ -28,6 +28,13 @@ static RongCloudIMFlattenMapBlock _flattenMapBlock;
     return _shared;
 }
 
+- (RongCloudIMCenterManager *(^)(NSString *))connect {
+    return ^ RongCloudIMCenterManager *(NSString *token) {
+        self.dataRequest.token = token;
+        return self;
+    };
+}
+
 - (RongCloudIMCenterManager *(^)(NSString *, RCUserInfo *, RCMessageContent *, NSString *, NSString *))sendMessages {
     return ^RongCloudIMCenterManager *(NSString *targetId, RCUserInfo *sendUserInfo, RCMessageContent *content, NSString *pushContent, NSString *pushData) {
         self.dataRequest.targetId = targetId;
@@ -70,6 +77,47 @@ static RongCloudIMFlattenMapBlock _flattenMapBlock;
 #endif
 
 #ifdef RAC
+
+- (RACSignal *)connectExecuteSignal {
+    return [self rac_connect];
+}
+
+- (RACSignal *)rac_connect {
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        [[RCIM sharedRCIM] connectWithToken:self.dataRequest.token success:^(NSString *userId) {
+            if (userId != nil) {
+                [subscriber sendNext:userId];
+            } else {
+                NSLog(@"userId无法获取");
+                [subscriber sendCompleted];
+            }
+        } error:^(RCConnectErrorCode status) {
+            NSLog(@"登陆的错误码为%ld",(long)status);
+            [subscriber sendError:[NSError errorWithDomain:@"" code:500 userInfo:nil]];
+        } tokenIncorrect:^{
+            NSLog(@"token 错误");
+            [subscriber sendCompleted];
+        }];
+        
+        return nil;
+    }];
+    
+    return signal;
+}
+
+- (RACSignal *)logoutExecuteSignal {
+    return [self rac_logout];
+}
+
+- (RACSignal *)rac_logout {
+    RACSignal *logoutSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [[RCIM sharedRCIM] logout];
+        return nil;
+    }];
+    return logoutSignal;
+}
+
 - (RACSignal *)executeSignal {
     
     RACSignal *resultSignal = [self rac_sendMessages:self.dataRequest];

@@ -17,22 +17,6 @@
 #endif
 #endif
 
-//#if __has_include(<RongIMKit/RongIMKit.h>)
-//#import <RongIMKit/RongIMKit.h>
-//#else
-//#if __has_include("RongIMKit.h")
-//#import "RongIMKit.h"
-//#endif
-//#endif
-//
-//#if __has_include(<RongIMLib/RongIMLib.h>)
-//#import <RongIMLib/RongIMLib.h>
-//#else
-//#if __has_include("RongIMLib.h")
-//#import "RongIMLib.h"
-//#endif
-//#endif
-
 @interface RongCloudIMCenterManager : NSObject
 
 #ifdef RAC
@@ -48,9 +32,9 @@ typedef RACStream *(^RongCloudIMFlattenMapBlock)(RACTuple *tuple);
 /** RAC链式发送请求 */
 
 //消息连接
-//- (RACSignal *)connectExecuteSignal;
-////消息logout
-//- (RACSignal *)logoutExecuteSignal;
+- (RACSignal *)connectExecuteSignal;
+//消息logout
+- (RACSignal *)logoutExecuteSignal;
 //消息发送
 - (RACSignal *)executeSignal;
 - (RACSignal *)sendMessagesExecuteSignal;
@@ -58,37 +42,17 @@ typedef RACStream *(^RongCloudIMFlattenMapBlock)(RACTuple *tuple);
 #endif
 
 #pragma mark 链式调用
-
-/*
- targetId: String,
- sendUserInfo: RCUserInfo,
- content: RCMessageContent,
- pushContent: String? = nil,
- pushData: String? = nil
- */
-
 /** 链式调用 */
+- (RongCloudIMCenterManager *(^)(NSString *token))connect;
 - (RongCloudIMCenterManager *(^)(NSString *targetId,
                                  RCUserInfo *sendUserInfo,
                                  RCMessageContent *content,
                                  NSString *pushContent,
                                  NSString *pushData))sendMessages;
-/*
- targetId: String, sendUserInfo: RCUserInfo, content: String, extra: String
- */
 - (RongCloudIMCenterManager *(^)(NSString *targetId,
                                    RCUserInfo *sendUserInfo,
                                    RCMessageContent *content,
                                    NSString *extra))sendTextMessage;
-
-/*
- toUserId: String,
- sendUserInfo: RCUserInfo,
- content: RCMessageContent,
- houseId: Int? = 0,
- houseName: String? = ""
- */
-
 - (RongCloudIMCenterManager *(^)(NSString *toUserId,
                                  RCUserInfo *sendUserInfo,
                                  RCMessageContent *content,
