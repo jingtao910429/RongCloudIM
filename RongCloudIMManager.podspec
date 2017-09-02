@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RongCloudIMManager"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "RongCloudIM‘s upper pack of RongCloudIMManager."
 
   # This description is used to generate tags and improve search results.
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
   # , "RongCloudIM/RongIMLib/*.{h}", "RongCloudIM/RongIMKit/*.{h}"
-  s.source_files  = "Source/*.{h}"
+  s.source_files  = "Source/*.{h,m}"
   # s.source_files  = "Classes", "Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
