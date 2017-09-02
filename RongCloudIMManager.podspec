@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   # , :tag => "#{s.version}" 
-  s.source       = { :git => "https://github.com/jingtao910429/RongCloudIMManager.git", :tag => '0.0.6'}
+  s.source       = { :git => "https://github.com/jingtao910429/RongCloudIMManager.git"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
