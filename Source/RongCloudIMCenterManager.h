@@ -24,6 +24,14 @@
 //更新SDK中的用户信息缓存
 - (void)refreshUserInfoCache;
 
+//消息发送
+- (void)sendMessageAssociateType:(void (^)(long messageId))successBlock
+                           error:(void (^)(RCErrorCode nErrorCode,
+                                           long messageId))errorBlock;
+- (void)sendTextMessage:(void (^)(long messageId))successBlock
+                  error:(void (^)(RCErrorCode nErrorCode,
+                                  long messageId))errorBlock;
+
 
 #pragma mark 链式调用
 /** 链式调用 */
@@ -31,22 +39,25 @@
 - (RongCloudIMCenterManager *(^)(NSString *token))token;
 - (RongCloudIMCenterManager *(^)(RCUserInfo *userInfo, NSString *userId))refreshCache;
 
+- (RongCloudIMCenterManager *(^)(RCMessageContent *content,
+                                 RCUserInfo *userInfo,
+                                 NSString *targetId))sendMessageAssociateType;
 - (RongCloudIMCenterManager *(^)(NSString *targetId,
-                                 RCUserInfo *sendUserInfo,
+                                 RCUserInfo *userInfo,
                                  RCMessageContent *content,
                                  NSString *pushContent,
                                  NSString *pushData))sendMessages;
 - (RongCloudIMCenterManager *(^)(NSString *targetId,
-                                   RCUserInfo *sendUserInfo,
+                                   RCUserInfo *userInfo,
                                    RCMessageContent *content,
                                    NSString *extra))sendTextMessage;
-- (RongCloudIMCenterManager *(^)(NSString *toUserId,
-                                 RCUserInfo *sendUserInfo,
+- (RongCloudIMCenterManager *(^)(NSString *userId,
+                                 RCUserInfo *userInfo,
                                  RCMessageContent *content,
                                  NSInteger houseId,
                                  NSString *houseName))sendMsgToServer;
 
-- (RongCloudIMCenterManager *(^)(NSString *toUserId,
+- (RongCloudIMCenterManager *(^)(NSString *userId,
                                  RCMessageContent *content,
                                  NSInteger houseId,
                                  NSString *houseName))chat;

@@ -10,14 +10,15 @@
 #import "RongCloudIMDataRequest.h"
 
 @interface RongCloudIMCenterManager ()
+
 @property (nonatomic, strong) RongCloudIMDataRequest *dataRequest;
+
+- (void)sendMessages:(void (^)(long messageId))successBlock
+                  error:(void (^)(RCErrorCode nErrorCode,
+                                  long messageId))errorBlock;
 @end
 
 @implementation RongCloudIMCenterManager
-
-#ifdef RAC
-static RongCloudIMFlattenMapBlock _flattenMapBlock;
-#endif
 
 + (instancetype)manager {
     static id _shared;
@@ -43,10 +44,20 @@ static RongCloudIMFlattenMapBlock _flattenMapBlock;
     };
 }
 
-- (RongCloudIMCenterManager *(^)(NSString *, RCUserInfo *, RCMessageContent *, NSString *, NSString *))sendMessages {
-    return ^RongCloudIMCenterManager *(NSString *targetId, RCUserInfo *sendUserInfo, RCMessageContent *content, NSString *pushContent, NSString *pushData) {
+- (RongCloudIMCenterManager *(^)(RCMessageContent *, RCUserInfo *, NSString *))sendMessageAssociateType {
+    return ^RongCloudIMCenterManager *(RCMessageContent *content, RCUserInfo *userInfo, NSString *targetId) {
+        self.dataRequest.content = content;
+        self.dataRequest.userInfo = userInfo;
+        self.dataRequest.content.senderUserInfo = userInfo;
         self.dataRequest.targetId = targetId;
-        self.dataRequest.userInfo = sendUserInfo;
+        return self;
+    };
+}
+
+- (RongCloudIMCenterManager *(^)(NSString *, RCUserInfo *, RCMessageContent *, NSString *, NSString *))sendMessages {
+    return ^RongCloudIMCenterManager *(NSString *targetId, RCUserInfo *userInfo, RCMessageContent *content, NSString *pushContent, NSString *pushData) {
+        self.dataRequest.targetId = targetId;
+        self.dataRequest.userInfo = userInfo;
         self.dataRequest.content = content;
         self.dataRequest.pushContent = pushContent;
         self.dataRequest.pushData = pushData;
@@ -55,9 +66,9 @@ static RongCloudIMFlattenMapBlock _flattenMapBlock;
 }
 
 - (RongCloudIMCenterManager *(^)(NSString *, RCUserInfo *, RCMessageContent *, NSString *))sendTextMessage {
-    return ^RongCloudIMCenterManager *(NSString *targetId, RCUserInfo *sendUserInfo, RCMessageContent *content, NSString *extra) {
+    return ^RongCloudIMCenterManager *(NSString *targetId, RCUserInfo *userInfo, RCMessageContent *content, NSString *extra) {
         self.dataRequest.targetId = targetId;
-        self.dataRequest.userInfo = sendUserInfo;
+        self.dataRequest.userInfo = userInfo;
         self.dataRequest.content = content;
         self.dataRequest.extra = extra;
         return self;
@@ -66,9 +77,9 @@ static RongCloudIMFlattenMapBlock _flattenMapBlock;
 
 - (RongCloudIMCenterManager *(^)(NSString *, RCUserInfo *, RCMessageContent *, NSInteger, NSString *))sendMsgToServer {
     
-    return ^RongCloudIMCenterManager *(NSString *toUserId, RCUserInfo *sendUserInfo, RCMessageContent *content, NSInteger houseId, NSString *houseName) {
-        self.dataRequest.userId = toUserId;
-        self.dataRequest.userInfo = sendUserInfo;
+    return ^RongCloudIMCenterManager *(NSString *userId, RCUserInfo *userInfo, RCMessageContent *content, NSInteger houseId, NSString *houseName) {
+        self.dataRequest.userId = userId;
+        self.dataRequest.userInfo = userInfo;
         self.dataRequest.content = content;
         self.dataRequest.houseId = houseId;
         self.dataRequest.houseName = houseName;
@@ -79,8 +90,8 @@ static RongCloudIMFlattenMapBlock _flattenMapBlock;
 
 - (RongCloudIMCenterManager *(^)(NSString *, RCMessageContent *, NSInteger, NSString *))chat {
     
-    return ^RongCloudIMCenterManager *(NSString *toUserId, RCMessageContent *content, NSInteger houseId, NSString *houseName) {
-        self.dataRequest.userId = toUserId;
+    return ^RongCloudIMCenterManager *(NSString *userId, RCMessageContent *content, NSInteger houseId, NSString *houseName) {
+        self.dataRequest.userId = userId;
         self.dataRequest.content = content;
         self.dataRequest.houseId = houseId;
         self.dataRequest.houseName = houseName;
@@ -109,9 +120,34 @@ static RongCloudIMFlattenMapBlock _flattenMapBlock;
     [[RCIM sharedRCIM] logout];
 }
 
+
+#pragma mark - Cache
+
 - (void)refreshUserInfoCache {
     [[RCIM sharedRCIM] refreshUserInfoCache:self.dataRequest.userInfo withUserId:self.dataRequest.userId];
 }
+
+
+#pragma mark - Message About
+
+- (void)sendMessageAssociateType:(void (^)(long))successBlock error:(void (^)(RCErrorCode, long))errorBlock {
+    
+    [self sendMessages:^(long messageId) {
+        successBlock(messageId);
+    } error:^(RCErrorCode nErrorCode, long messageId) {
+        errorBlock(nErrorCode, messageId);
+    }];
+    
+}
+
+- (void)sendTextMessage:(void (^)(long))successBlock error:(void (^)(RCErrorCode, long))errorBlock {
+    
+}
+
+- (void)sendMessages:(void (^)(long))successBlock error:(void (^)(RCErrorCode, long))errorBlock {
+    
+}
+
 
 //#pragma mark - Result Config
 //#ifdef RAC

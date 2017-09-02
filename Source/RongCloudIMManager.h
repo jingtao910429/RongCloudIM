@@ -16,5 +16,5 @@ FOUNDATION_EXPORT const unsigned char RongCloudIMManagerVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <RongCloudIMManager/PublicHeader.h>
 
-//#import <RongIMKit/RongIMKit.h>
-//#import <RongIMLib/RongIMLib.h>
+#import <RongIMKit/RongIMKit.h>
+#import <RongIMLib/RongIMLib.h>
