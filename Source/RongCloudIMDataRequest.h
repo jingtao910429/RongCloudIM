@@ -7,9 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class RCUserInfo;
-@class RCMessageContent;
+#import "RongCloudIMManager.h"
 
 @interface RongCloudIMDataRequest : NSObject
 

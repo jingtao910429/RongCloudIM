@@ -8,8 +8,6 @@
 
 #import "RongCloudIMCenterManager.h"
 #import "RongCloudIMDataRequest.h"
-#import <RongIMKit/RongIMKit.h>
-#import <RongIMLib/RongIMLib.h>
 
 @interface RongCloudIMCenterManager ()
 

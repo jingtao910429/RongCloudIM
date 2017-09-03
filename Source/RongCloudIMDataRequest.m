@@ -7,8 +7,6 @@
 //
 
 #import "RongCloudIMDataRequest.h"
-#import <RongIMKit/RongIMKit.h>
-#import <RongIMLib/RongIMLib.h>
 
 @implementation RongCloudIMDataRequest
 

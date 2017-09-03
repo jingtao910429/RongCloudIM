@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RongIMKit/RongIMKit.h>
-#import <RongIMLib/RongIMLib.h>
+#import "RongCloudIMManager.h"
 
 @interface RongCloudIMCenterManager : NSObject
 
