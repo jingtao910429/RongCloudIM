@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RongCloudIMManager"
-  s.version      = "0.1.2"
+  s.version      = "0.1.3"
   s.summary      = "RongCloudIM‘s upper pack of RongCloudIMManager."
 
   # This description is used to generate tags and improve search results.
@@ -121,13 +121,13 @@ Pod::Spec.new do |s|
 
   # s.framework  = "SomeFramework"
   s.frameworks = 'Foundation'
-  # s.vendored_frameworks = ['RongCloudIM/RongIMLib.framework', 'RongCloudIM/RongIMKit.framework']
-  # s.resource_bundles = {'Resources' => 'RongCloudIM/RongCloud.bundle'}
-  # s.resources = "RongCloudIM/*.plist", "RongCloudIM/*.lproj"
-  # s.vendored_libraries = 'RongCloudIM/libopencore-amrnb.a' #表示依赖第三方/自己的静态库（比如libWeChatSDK.a）
+  s.vendored_frameworks = ['RongCloudIM/RongIMLib.framework', 'RongCloudIM/RongIMKit.framework']
+  s.resource_bundles = {'Resources' => 'RongCloudIM/RongCloud.bundle'}
+  s.resources = "RongCloudIM/*.plist", "RongCloudIM/*.lproj"
+  s.vendored_libraries = 'RongCloudIM/libopencore-amrnb.a' #表示依赖第三方/自己的静态库（比如libWeChatSDK.a）
 
   # # s.library   = "iconv"
-  # s.libraries = "sqlite3.0", "c++", "xml2", "stdc++", "z"
+  s.libraries = "sqlite3.0", "c++", "xml2", "stdc++", "z"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -141,7 +141,7 @@ Pod::Spec.new do |s|
   # s.xcconfig         = { 'OTHER_LDFLAGS' => '-all_load'}
 
   # s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'RongCloudIMManager-umbrella.h' }
-  s.dependency 'RongCloudIMLibrary', '~>0.0.1'
+  # s.dependency 'RongCloudIMLibrary', '~>0.0.1'
   # s.dependency 'Moya'
   # s.dependency 'RxSwift'
   # s.dependency 'ObjectMapper'
