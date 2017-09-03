@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RongCloudIMManager"
-  s.version      = "0.1.4"
+  s.version      = "0.1.6"
   s.summary      = "RongCloudIM‘s upper pack of RongCloudIMManager."
 
   # This description is used to generate tags and improve search results.
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
   # , "RongCloudIM/RongIMLib/*.{h}", "RongCloudIM/RongIMKit/*.{h}"
-  s.source_files  = "Source", "Source/**/*.{h,m}"
+  s.source_files  = "Source/*.{h,m}"
   # s.source_files  = "Classes", "Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
@@ -137,8 +137,8 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   s.requires_arc = true
-  s.xcconfig       = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Headers/Public/RongCloudIMManager" }
-  # s.xcconfig         = { 'OTHER_LDFLAGS' => '-all_load'}
+  # s.xcconfig       = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Headers/Public/RongCloudIMManager" }
+  s.xcconfig         = { 'OTHER_LDFLAGS' => '-all_load'}
 
   # s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'RongCloudIMManager-umbrella.h' }
   # s.dependency 'RongCloudIMLibrary', '~>0.0.1'
