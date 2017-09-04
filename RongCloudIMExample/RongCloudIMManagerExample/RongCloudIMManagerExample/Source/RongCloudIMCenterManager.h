@@ -49,7 +49,7 @@ typedef void*(^OffLine)(BOOL offLine);
                                       content:(NSString *)content
                                         extra:(NSString *)extra;
 
-- (RongCloudIMCenterManager *)sendMsgToServer:(NSString *)userId
+- (RongCloudIMCenterManager *)sendMessageToServer:(NSString *)userId
                                      userInfo:(RCUserInfo *)userInfo
                                       content:(RCMessageContent *)content
                                       houseId:(NSInteger)houseId

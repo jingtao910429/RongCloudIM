@@ -71,7 +71,7 @@
     return self;
 }
 
-- (RongCloudIMCenterManager *)sendMsgToServer:(NSString *)userId userInfo:(RCUserInfo *)userInfo content:(RCMessageContent *)content houseId:(NSInteger)houseId houseName:(NSString *)houseName {
+- (RongCloudIMCenterManager *)sendMessageToServer:(NSString *)userId userInfo:(RCUserInfo *)userInfo content:(RCMessageContent *)content houseId:(NSInteger)houseId houseName:(NSString *)houseName {
     [self dataRequestFactory];
     _dataRequest.userId = userId;
     _dataRequest.userInfo = userInfo;
