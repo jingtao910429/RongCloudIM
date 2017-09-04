@@ -9,8 +9,10 @@
 #import "RongCloudIMCenterManager.h"
 #import "RongCloudIMDataRequest.h"
 #import "RCTextMessage+Additions.h"
+#import "MessageType.h"
+#import "MessageTypeEstate.h"
 
-@interface RongCloudIMCenterManager ()
+@interface RongCloudIMCenterManager () <RCIMConnectionStatusDelegate ,RCIMReceiveMessageDelegate>
 
 @property (nonatomic, strong) RongCloudIMDataRequest *dataRequest;
 
@@ -34,25 +36,25 @@
     return _shared;
 }
 
-+ (RongCloudIMDataRequest *)dataRequestFactory {
-    return [[RongCloudIMDataRequest alloc] init];
+- (void)dataRequestFactory {
+    _dataRequest = [[RongCloudIMDataRequest alloc] init];
 }
 
 - (RongCloudIMCenterManager *)token:(NSString *)token {
-    _dataRequest = [RongCloudIMCenterManager dataRequestFactory];
+    [self dataRequestFactory];
     _dataRequest.token = token;
     return self;
 }
 
 - (RongCloudIMCenterManager *)refreshCache:(RCUserInfo *)userInfo userId:(NSString *)userId {
-    _dataRequest = [RongCloudIMCenterManager dataRequestFactory];
+    [self dataRequestFactory];
     _dataRequest.userInfo = userInfo;
     _dataRequest.userId = userId;
     return self;
 }
 
 - (RongCloudIMCenterManager *)sendMessageAssociateType:(RCMessageContent *)content userInfo:(RCUserInfo *)userInfo targetId:(NSString *)targetId {
-    _dataRequest = [RongCloudIMCenterManager dataRequestFactory];
+    [self dataRequestFactory];
     _dataRequest.content = content;
     _dataRequest.userInfo = userInfo;
     _dataRequest.content.senderUserInfo = userInfo;
@@ -61,7 +63,7 @@
 }
 
 - (RongCloudIMCenterManager *)sendTextMessage:(NSString *)targetId userInfo:(RCUserInfo *)userInfo content:(NSString *)content extra:(NSString *)extra {
-    _dataRequest = [RongCloudIMCenterManager dataRequestFactory];
+    [self dataRequestFactory];
     _dataRequest.targetId = targetId;
     _dataRequest.userInfo = userInfo;
     _dataRequest.pushContent = content;
@@ -70,7 +72,7 @@
 }
 
 - (RongCloudIMCenterManager *)sendMsgToServer:(NSString *)userId userInfo:(RCUserInfo *)userInfo content:(RCMessageContent *)content houseId:(NSInteger)houseId houseName:(NSString *)houseName {
-    _dataRequest = [RongCloudIMCenterManager dataRequestFactory];
+    [self dataRequestFactory];
     _dataRequest.userId = userId;
     _dataRequest.userInfo = userInfo;
     _dataRequest.content = content;
@@ -80,7 +82,7 @@
 }
 
 - (RongCloudIMCenterManager *)chat:(NSString *)userId content:(RCMessageContent *)content houseId:(NSInteger)houseId houseName:(NSString *)houseName {
-    _dataRequest = [RongCloudIMCenterManager dataRequestFactory];
+    [self dataRequestFactory];
     _dataRequest.userId = userId;
     _dataRequest.content = content;
     _dataRequest.houseId = houseId;
@@ -91,8 +93,18 @@
 #pragma mark - Result Config
 
 //消息配置
-- (void)config:(NSString *)key {
+- (void)config:(NSString *)key classes:(NSArray *)messageClasses dataSource:(id <IMCUserInfoDataSource>)dataSource {
+    self.dataSource = dataSource;
     [[RCIM sharedRCIM] initWithAppKey:key];
+    [[RCIM sharedRCIM] setGlobalMessageAvatarStyle:RC_USER_AVATAR_CYCLE];
+    [[RCIM sharedRCIM] setEnablePersistentUserInfoCache:YES];
+    [[RCIM sharedRCIM] setEnableTypingStatus:YES];
+    for (id class in messageClasses) {
+        [[RCIM sharedRCIM] registerMessageType:class];
+    }
+    [[RCIM sharedRCIM] setUserInfoDataSource:self];
+    [[RCIM sharedRCIM] setConnectionStatusDelegate:self];
+    [[RCIM sharedRCIM] setReceiveMessageDelegate:self];
     
 }
 
@@ -125,6 +137,18 @@
     return [[RCIM sharedRCIM] getUserInfoCache:userId];
 }
 
+- (void)getUserInfoFromDataSourceWithUserId:(NSString *)userId targetId:(NSString *)targetId completion:(void (^)(RCUserInfo *))completion {
+    
+    if (targetId) {
+        [[RCIMClient sharedRCIMClient] clearMessagesUnreadStatus:ConversationType_PRIVATE targetId:targetId];
+    }
+    
+    [self getUserInfoWithUserId:userId completion:^(RCUserInfo *userInfo) {
+        completion(userInfo);
+    }];
+    
+}
+
 - (void)clearUserInfoCache {
     [[RCIM sharedRCIM] clearUserInfoCache];
 }
@@ -138,7 +162,6 @@
     } error:^(RCErrorCode nErrorCode, long messageId) {
         errorBlock(nErrorCode, messageId);
     }];
-    
 }
 
 - (void)sendTextMessage:(void (^)(long))successBlock error:(void (^)(RCErrorCode, long))errorBlock {
@@ -154,7 +177,25 @@
 }
 
 - (void)sendMessageToServer:(void (^)())successBlock error:(void (^)(NSError *))errorBlock {
-    [self chat:^{
+    
+    if ([_dataRequest.content isKindOfClass:[MessageType class]]) {
+        MessageType *messageType = (MessageType *)_dataRequest.content;
+        _dataRequest.houseId = messageType.house_id;
+        _dataRequest.houseName = messageType.house_name;
+    } else if ([_dataRequest.content isKindOfClass:[MessageTypeEstate class]]) {
+        MessageTypeEstate *messageTypeEstate = (MessageTypeEstate *)_dataRequest.content;
+        _dataRequest.houseId = messageTypeEstate.house_id;
+        _dataRequest.houseName = messageTypeEstate.house_name;
+    } else if ([_dataRequest.content isKindOfClass:[RCTextMessage class]]) {
+        RCTextMessage *textMessage = (RCTextMessage *)_dataRequest.content;
+        _dataRequest.extra = textMessage.extra;
+        
+        NSArray *extraArray = [self sepExtraString:_dataRequest.extra];
+        _dataRequest.houseId = [extraArray[1] integerValue];
+        _dataRequest.houseName = extraArray[0];
+    }
+    
+    [[self chat:_dataRequest.userId content:_dataRequest.content houseId:_dataRequest.houseId houseName:_dataRequest.houseName] chat:^{
         successBlock();
     } error:^(NSError *error) {
         errorBlock(error);
@@ -186,7 +227,69 @@
     
 }
 
+- (NSArray *)sepExtraString:(NSString *)extra {
+    
+    NSArray *array = [extra componentsSeparatedByString:@"&"];
+    if (array.count < 2) {
+        return @[array[0], @(0)];
+    } else {
+        
+        NSArray *subs = [[NSString stringWithFormat:@"%@",array[1]] componentsSeparatedByString:@"!"];
+        if ([subs count] < 2) {
+            return @[array[0], @(0)];
+        } else {
+            return @[array[0], @([subs[1] integerValue])];
+        }
+    }
+}
+
 #pragma mark - Getters & Setters
 
+#pragma mark - RCIMUserInfoDataSource
 
+// 获取用户信息
+- (void)getUserInfoWithUserId:(NSString *)userId completion:(void (^)(RCUserInfo *))completion {
+    if (!userId || userId.length == 0) {
+        return completion(nil);
+    } else {
+        if ([self.dataSource respondsToSelector:@selector(getUserInfoWithUserId:completion:)]) {
+            [self.dataSource getUserInfoWithUserId:userId completion:completion];
+        } else {
+            return completion(nil);
+        }
+    }
+}
+
+#pragma mark - RCIMConnectionStatusDelegate
+
+- (void)onRCIMConnectionStatusChanged:(RCConnectionStatus)status {
+    if (self.connectionStatusBlock != nil) {
+        self.connectionStatusBlock(status);
+    }
+    
+    if (self.offLine != nil) {
+        if (status == ConnectionStatus_KICKED_OFFLINE_BY_OTHER_CLIENT) {
+            self.offLine(YES);
+        } else {
+            self.offLine(NO);
+        }
+    }
+}
+
+#pragma mark - RCIMReceiveMessageDelegate
+
+- (void)onRCIMReceiveMessage:(RCMessage *)message left:(int)left {
+    
+}
+
+- (BOOL)onRCIMCustomAlertSound:(RCMessage *)message {
+    return YES;
+}
+
+- (BOOL)onRCIMCustomLocalNotification:(RCMessage *)message withSenderName:(NSString *)senderName {
+    return YES;
+}
+
+#pragma mark -
 @end
+

@@ -1,0 +1,1 @@
+../../../../RongCloudIMLibrary/RongCloudIM/RongIMLib.framework/Headers/RCPublicServiceRichContentMessage.h

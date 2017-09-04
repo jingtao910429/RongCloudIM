@@ -9,12 +9,27 @@
 #import <Foundation/Foundation.h>
 #import "RongCloudIMManager.h"
 
-@interface RongCloudIMCenterManager : NSObject
+typedef void*(^ConnectionStatusBlock)(RCConnectionStatus status);
+typedef void*(^OffLine)(BOOL offLine);
+
+@protocol IMCUserInfoDataSource <NSObject>
+
+@required
+- (void)getUserInfoWithUserId:(NSString *)userId
+                           completion:(void (^)(RCUserInfo *userInfo))completion;
+
+@end
+
+@interface RongCloudIMCenterManager : NSObject <RCIMUserInfoDataSource>
 
 /**
  单例对象
  */
 + (instancetype)manager;
+
+@property (nonatomic, weak) id <IMCUserInfoDataSource> dataSource;
+@property (nonatomic, copy) ConnectionStatusBlock connectionStatusBlock;
+@property (nonatomic, copy) OffLine offLine;
 
 #pragma mark 链式调用
 /** 链式调用 */
@@ -38,9 +53,8 @@
                                       houseId:(NSInteger)houseId
                                     houseName:(NSString *)houseName;
 
-
 //消息配置
-- (void)config:(NSString *)key;
+- (void)config:(NSString *)key classes:(NSArray *)messageClasses dataSource:(id <IMCUserInfoDataSource>)dataSource;
 
 //消息连接
 - (void)connect:(void (^)(NSString *userId))successBlock;
@@ -53,6 +67,11 @@
 - (RCUserInfo *)getUserInfoCache:(NSString *)userId;
 //清空SDK中所有的用户信息缓存
 - (void)clearUserInfoCache;
+
+//获取用户信息
+- (void)getUserInfoFromDataSourceWithUserId:(NSString *)userId
+                                   targetId:(NSString *)targetId
+                                 completion:(void (^)(RCUserInfo *userInfo))completion;
 
 //消息发送
 - (void)sendMessageAssociateType:(void (^)(long messageId))successBlock

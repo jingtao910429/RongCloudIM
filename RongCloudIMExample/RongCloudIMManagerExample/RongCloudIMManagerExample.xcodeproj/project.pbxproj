@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04416B761F5CE5F1005CEBBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04416B751F5CE5F1005CEBBA /* AppDelegate.swift */; };
+		04416B781F5CE5F1005CEBBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04416B771F5CE5F1005CEBBA /* ViewController.swift */; };
+		04416B7B1F5CE5F1005CEBBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04416B791F5CE5F1005CEBBA /* Main.storyboard */; };
+		04416B7D1F5CE5F1005CEBBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04416B7C1F5CE5F1005CEBBA /* Assets.xcassets */; };
+		04416B801F5CE5F1005CEBBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04416B7E1F5CE5F1005CEBBA /* LaunchScreen.storyboard */; };
+		04AD18D11F5CE7E70050B28E /* RongCloudIMCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18CD1F5CE7E70050B28E /* RongCloudIMCenterManager.m */; };
+		04AD18D21F5CE7E70050B28E /* RongCloudIMDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18CF1F5CE7E70050B28E /* RongCloudIMDataRequest.m */; };
+		04AD18D91F5CECAA0050B28E /* RCUserInfo+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18D81F5CECAA0050B28E /* RCUserInfo+Additions.m */; };
+		04AD18DC1F5CECDC0050B28E /* RCTextMessage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18DB1F5CECDC0050B28E /* RCTextMessage+Additions.m */; };
+		04AD18DE1F5D01190050B28E /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18DD1F5D01190050B28E /* MessageType.swift */; };
+		04AD18E11F5D1F3E0050B28E /* MessageType.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18E01F5D1F3E0050B28E /* MessageType.m */; };
+		04AD18E41F5D25E20050B28E /* MessageTypeEstate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18E31F5D25E20050B28E /* MessageTypeEstate.m */; };
+		04AD18E71F5D26170050B28E /* MessageCommonContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18E61F5D26170050B28E /* MessageCommonContent.m */; };
+		04AD18E91F5D26CF0050B28E /* MessageTypeEstate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18E81F5D26CF0050B28E /* MessageTypeEstate.swift */; };
+		3532FA0D7B13E5F1D2C6C73C /* libPods-RongCloudIMManagerExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F700FDD0485A239C37BE8B10 /* libPods-RongCloudIMManagerExample.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02BF13022FB2116CC613AADE /* Pods-RongCloudIMManagerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudIMManagerExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RongCloudIMManagerExample/Pods-RongCloudIMManagerExample.debug.xcconfig"; sourceTree = "<group>"; };
+		04416B721F5CE5F1005CEBBA /* RongCloudIMManagerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RongCloudIMManagerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04416B751F5CE5F1005CEBBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04416B771F5CE5F1005CEBBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04416B7A1F5CE5F1005CEBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04416B7C1F5CE5F1005CEBBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04416B7F1F5CE5F1005CEBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04416B811F5CE5F1005CEBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04AD18C71F5CE7860050B28E /* RongCloudIMManagerExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RongCloudIMManagerExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		04AD18CC1F5CE7E70050B28E /* RongCloudIMCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RongCloudIMCenterManager.h; sourceTree = "<group>"; };
+		04AD18CD1F5CE7E70050B28E /* RongCloudIMCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RongCloudIMCenterManager.m; sourceTree = "<group>"; };
+		04AD18CE1F5CE7E70050B28E /* RongCloudIMDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RongCloudIMDataRequest.h; sourceTree = "<group>"; };
+		04AD18CF1F5CE7E70050B28E /* RongCloudIMDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RongCloudIMDataRequest.m; sourceTree = "<group>"; };
+		04AD18D01F5CE7E70050B28E /* RongCloudIMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RongCloudIMManager.h; sourceTree = "<group>"; };
+		04AD18D71F5CECAA0050B28E /* RCUserInfo+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCUserInfo+Additions.h"; sourceTree = "<group>"; };
+		04AD18D81F5CECAA0050B28E /* RCUserInfo+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCUserInfo+Additions.m"; sourceTree = "<group>"; };
+		04AD18DA1F5CECDC0050B28E /* RCTextMessage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTextMessage+Additions.h"; sourceTree = "<group>"; };
+		04AD18DB1F5CECDC0050B28E /* RCTextMessage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTextMessage+Additions.m"; sourceTree = "<group>"; };
+		04AD18DD1F5D01190050B28E /* MessageType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
+		04AD18DF1F5D1F3E0050B28E /* MessageType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageType.h; sourceTree = "<group>"; };
+		04AD18E01F5D1F3E0050B28E /* MessageType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageType.m; sourceTree = "<group>"; };
+		04AD18E21F5D25E20050B28E /* MessageTypeEstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTypeEstate.h; sourceTree = "<group>"; };
+		04AD18E31F5D25E20050B28E /* MessageTypeEstate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTypeEstate.m; sourceTree = "<group>"; };
+		04AD18E51F5D26170050B28E /* MessageCommonContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCommonContent.h; sourceTree = "<group>"; };
+		04AD18E61F5D26170050B28E /* MessageCommonContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCommonContent.m; sourceTree = "<group>"; };
+		04AD18E81F5D26CF0050B28E /* MessageTypeEstate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTypeEstate.swift; sourceTree = "<group>"; };
+		0510B335D729EA8A71398F76 /* Pods-RongCloudIMManagerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudIMManagerExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RongCloudIMManagerExample/Pods-RongCloudIMManagerExample.release.xcconfig"; sourceTree = "<group>"; };
+		F700FDD0485A239C37BE8B10 /* libPods-RongCloudIMManagerExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RongCloudIMManagerExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04416B6F1F5CE5F1005CEBBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3532FA0D7B13E5F1D2C6C73C /* libPods-RongCloudIMManagerExample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04416B691F5CE5F1005CEBBA = {
+			isa = PBXGroup;
+			children = (
+				04416B741F5CE5F1005CEBBA /* RongCloudIMManagerExample */,
+				04416B731F5CE5F1005CEBBA /* Products */,
+				15168D492B86A4E42910385E /* Pods */,
+				0820377BAEA0029496714F93 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04416B731F5CE5F1005CEBBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04416B721F5CE5F1005CEBBA /* RongCloudIMManagerExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04416B741F5CE5F1005CEBBA /* RongCloudIMManagerExample */ = {
+			isa = PBXGroup;
+			children = (
+				04AD18CB1F5CE7E70050B28E /* Source */,
+				04416B751F5CE5F1005CEBBA /* AppDelegate.swift */,
+				04416B771F5CE5F1005CEBBA /* ViewController.swift */,
+				04416B791F5CE5F1005CEBBA /* Main.storyboard */,
+				04416B7C1F5CE5F1005CEBBA /* Assets.xcassets */,
+				04416B7E1F5CE5F1005CEBBA /* LaunchScreen.storyboard */,
+				04416B811F5CE5F1005CEBBA /* Info.plist */,
+				04AD18C71F5CE7860050B28E /* RongCloudIMManagerExample-Bridging-Header.h */,
+			);
+			path = RongCloudIMManagerExample;
+			sourceTree = "<group>";
+		};
+		04AD18CB1F5CE7E70050B28E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				04AD18E81F5D26CF0050B28E /* MessageTypeEstate.swift */,
+				04AD18DD1F5D01190050B28E /* MessageType.swift */,
+				04AD18CC1F5CE7E70050B28E /* RongCloudIMCenterManager.h */,
+				04AD18CD1F5CE7E70050B28E /* RongCloudIMCenterManager.m */,
+				04AD18CE1F5CE7E70050B28E /* RongCloudIMDataRequest.h */,
+				04AD18CF1F5CE7E70050B28E /* RongCloudIMDataRequest.m */,
+				04AD18D01F5CE7E70050B28E /* RongCloudIMManager.h */,
+				04AD18D71F5CECAA0050B28E /* RCUserInfo+Additions.h */,
+				04AD18D81F5CECAA0050B28E /* RCUserInfo+Additions.m */,
+				04AD18DA1F5CECDC0050B28E /* RCTextMessage+Additions.h */,
+				04AD18DB1F5CECDC0050B28E /* RCTextMessage+Additions.m */,
+				04AD18DF1F5D1F3E0050B28E /* MessageType.h */,
+				04AD18E01F5D1F3E0050B28E /* MessageType.m */,
+				04AD18E21F5D25E20050B28E /* MessageTypeEstate.h */,
+				04AD18E31F5D25E20050B28E /* MessageTypeEstate.m */,
+				04AD18E51F5D26170050B28E /* MessageCommonContent.h */,
+				04AD18E61F5D26170050B28E /* MessageCommonContent.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0820377BAEA0029496714F93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F700FDD0485A239C37BE8B10 /* libPods-RongCloudIMManagerExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15168D492B86A4E42910385E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02BF13022FB2116CC613AADE /* Pods-RongCloudIMManagerExample.debug.xcconfig */,
+				0510B335D729EA8A71398F76 /* Pods-RongCloudIMManagerExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04416B711F5CE5F1005CEBBA /* RongCloudIMManagerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04416B841F5CE5F1005CEBBA /* Build configuration list for PBXNativeTarget "RongCloudIMManagerExample" */;
+			buildPhases = (
+				52E2EB6528AE15FEC391FCFF /* [CP] Check Pods Manifest.lock */,
+				04416B6E1F5CE5F1005CEBBA /* Sources */,
+				04416B6F1F5CE5F1005CEBBA /* Frameworks */,
+				04416B701F5CE5F1005CEBBA /* Resources */,
+				E3AAB854914EB5D3705B0B09 /* [CP] Embed Pods Frameworks */,
+				43FFAB6F68E1CF761DFA4109 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RongCloudIMManagerExample;
+			productName = RongCloudIMManagerExample;
+			productReference = 04416B721F5CE5F1005CEBBA /* RongCloudIMManagerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04416B6A1F5CE5F1005CEBBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = LiYou;
+				TargetAttributes = {
+					04416B711F5CE5F1005CEBBA = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = E2MHYTRHEB;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 04416B6D1F5CE5F1005CEBBA /* Build configuration list for PBXProject "RongCloudIMManagerExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04416B691F5CE5F1005CEBBA;
+			productRefGroup = 04416B731F5CE5F1005CEBBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04416B711F5CE5F1005CEBBA /* RongCloudIMManagerExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04416B701F5CE5F1005CEBBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04416B801F5CE5F1005CEBBA /* LaunchScreen.storyboard in Resources */,
+				04416B7D1F5CE5F1005CEBBA /* Assets.xcassets in Resources */,
+				04416B7B1F5CE5F1005CEBBA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43FFAB6F68E1CF761DFA4109 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RongCloudIMManagerExample/Pods-RongCloudIMManagerExample-resources.sh",
+				"${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/Emoji.plist",
+				"${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/RCConfig.plist",
+				"${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/en.lproj",
+				"${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/zh-Hans.lproj",
+				$PODS_CONFIGURATION_BUILD_DIR/RongCloudIMLibrary/Resources.bundle,
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RongCloudIMManagerExample/Pods-RongCloudIMManagerExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52E2EB6528AE15FEC391FCFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RongCloudIMManagerExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3AAB854914EB5D3705B0B09 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RongCloudIMManagerExample/Pods-RongCloudIMManagerExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04416B6E1F5CE5F1005CEBBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AD18DE1F5D01190050B28E /* MessageType.swift in Sources */,
+				04416B781F5CE5F1005CEBBA /* ViewController.swift in Sources */,
+				04AD18E41F5D25E20050B28E /* MessageTypeEstate.m in Sources */,
+				04AD18D91F5CECAA0050B28E /* RCUserInfo+Additions.m in Sources */,
+				04AD18D21F5CE7E70050B28E /* RongCloudIMDataRequest.m in Sources */,
+				04416B761F5CE5F1005CEBBA /* AppDelegate.swift in Sources */,
+				04AD18E91F5D26CF0050B28E /* MessageTypeEstate.swift in Sources */,
+				04AD18E71F5D26170050B28E /* MessageCommonContent.m in Sources */,
+				04AD18D11F5CE7E70050B28E /* RongCloudIMCenterManager.m in Sources */,
+				04AD18DC1F5CECDC0050B28E /* RCTextMessage+Additions.m in Sources */,
+				04AD18E11F5D1F3E0050B28E /* MessageType.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04416B791F5CE5F1005CEBBA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04416B7A1F5CE5F1005CEBBA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04416B7E1F5CE5F1005CEBBA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04416B7F1F5CE5F1005CEBBA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04416B821F5CE5F1005CEBBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04416B831F5CE5F1005CEBBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04416B851F5CE5F1005CEBBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02BF13022FB2116CC613AADE /* Pods-RongCloudIMManagerExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = E2MHYTRHEB;
+				INFOPLIST_FILE = RongCloudIMManagerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LiYou.RongCloudIMManagerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RongCloudIMManagerExample/RongCloudIMManagerExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		04416B861F5CE5F1005CEBBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0510B335D729EA8A71398F76 /* Pods-RongCloudIMManagerExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = E2MHYTRHEB;
+				INFOPLIST_FILE = RongCloudIMManagerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LiYou.RongCloudIMManagerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RongCloudIMManagerExample/RongCloudIMManagerExample-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04416B6D1F5CE5F1005CEBBA /* Build configuration list for PBXProject "RongCloudIMManagerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04416B821F5CE5F1005CEBBA /* Debug */,
+				04416B831F5CE5F1005CEBBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04416B841F5CE5F1005CEBBA /* Build configuration list for PBXNativeTarget "RongCloudIMManagerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04416B851F5CE5F1005CEBBA /* Debug */,
+				04416B861F5CE5F1005CEBBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04416B6A1F5CE5F1005CEBBA /* Project object */;
+}
