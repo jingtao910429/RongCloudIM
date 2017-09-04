@@ -126,6 +126,9 @@
     [[RCIM sharedRCIM] logout];
 }
 
+- (NSInteger)getTotalUnreadCount {
+    return [[RCIMClient sharedRCIMClient] getTotalUnreadCount];
+}
 
 #pragma mark - Cache
 
@@ -193,6 +196,9 @@
         NSArray *extraArray = [self sepExtraString:_dataRequest.extra];
         _dataRequest.houseId = [extraArray[1] integerValue];
         _dataRequest.houseName = extraArray[0];
+    } else {
+        errorBlock([NSError errorWithDomain:@"RCMessageContent 类型不需要添加chat操作" code:500 userInfo:nil]);
+        return;
     }
     
     [[self chat:_dataRequest.userId content:_dataRequest.content houseId:_dataRequest.houseId houseName:_dataRequest.houseName] chat:^{
@@ -269,11 +275,11 @@
 #pragma mark - RCIMConnectionStatusDelegate
 
 - (void)onRCIMConnectionStatusChanged:(RCConnectionStatus)status {
-    if (self.connectionStatusBlock != nil) {
+    if (self.connectionStatusBlock) {
         self.connectionStatusBlock(status);
     }
     
-    if (self.offLine != nil) {
+    if (self.offLine) {
         if (status == ConnectionStatus_KICKED_OFFLINE_BY_OTHER_CLIENT) {
             self.offLine(YES);
         } else {
@@ -285,7 +291,11 @@
 #pragma mark - RCIMReceiveMessageDelegate
 
 - (void)onRCIMReceiveMessage:(RCMessage *)message left:(int)left {
-    
+    if (left == 0) {
+        if (self.updateMessageCount) {
+            self.updateMessageCount([[RCIMClient sharedRCIMClient] getTotalUnreadCount]);
+        }
+    }
 }
 
 - (BOOL)onRCIMCustomAlertSound:(RCMessage *)message {

@@ -11,6 +11,7 @@
 
 typedef void*(^ConnectionStatusBlock)(RCConnectionStatus status);
 typedef void*(^OffLine)(BOOL offLine);
+typedef void*(^UpdateMessageCount)(NSInteger messageCount);
 
 @protocol IMCUserInfoDataSource <NSObject>
 
@@ -32,9 +33,9 @@ typedef void*(^OffLine)(BOOL offLine);
 @property (nonatomic, weak) id <IMCUserInfoDataSource> delegate;
 @property (nonatomic, copy) ConnectionStatusBlock connectionStatusBlock;
 @property (nonatomic, copy) OffLine offLine;
+@property (nonatomic, copy) UpdateMessageCount updateMessageCount;
 
-#pragma mark 链式调用
-/** 链式调用 */
+#pragma mark 参数设置
 
 - (RongCloudIMCenterManager *)token:(NSString *)token;
 
@@ -62,6 +63,9 @@ typedef void*(^OffLine)(BOOL offLine);
 - (void)connect:(void (^)(NSString *userId))successBlock;
 //logOut
 - (void)logOut;
+
+//获取所有的未读消息数
+- (NSInteger)getTotalUnreadCount;
 
 //更新SDK中的用户信息缓存
 - (void)refreshUserInfoCache;
