@@ -17,6 +17,8 @@ typedef void*(^OffLine)(BOOL offLine);
 @required
 - (void)getUserInfoWithUserId:(NSString *)userId
                            completion:(void (^)(RCUserInfo *userInfo))completion;
+@required
+- (void)addToChat:(NSString *)userId content:(NSString *)content houseId:(NSInteger)houseId houseName:(NSString *)houseName;
 
 @end
 
@@ -27,7 +29,7 @@ typedef void*(^OffLine)(BOOL offLine);
  */
 + (instancetype)manager;
 
-@property (nonatomic, weak) id <IMCUserInfoDataSource> dataSource;
+@property (nonatomic, weak) id <IMCUserInfoDataSource> delegate;
 @property (nonatomic, copy) ConnectionStatusBlock connectionStatusBlock;
 @property (nonatomic, copy) OffLine offLine;
 
@@ -54,7 +56,7 @@ typedef void*(^OffLine)(BOOL offLine);
                                     houseName:(NSString *)houseName;
 
 //消息配置
-- (void)config:(NSString *)key classes:(NSArray *)messageClasses dataSource:(id <IMCUserInfoDataSource>)dataSource;
+- (void)config:(NSString *)key classes:(NSArray *)messageClasses dataSource:(id <IMCUserInfoDataSource>)delegate;
 
 //消息连接
 - (void)connect:(void (^)(NSString *userId))successBlock;

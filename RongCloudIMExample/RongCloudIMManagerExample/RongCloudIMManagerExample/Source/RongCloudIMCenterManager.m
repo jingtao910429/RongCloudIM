@@ -93,8 +93,8 @@
 #pragma mark - Result Config
 
 //消息配置
-- (void)config:(NSString *)key classes:(NSArray *)messageClasses dataSource:(id <IMCUserInfoDataSource>)dataSource {
-    self.dataSource = dataSource;
+- (void)config:(NSString *)key classes:(NSArray *)messageClasses dataSource:(id <IMCUserInfoDataSource>)delegate {
+    self.delegate = delegate ;
     [[RCIM sharedRCIM] initWithAppKey:key];
     [[RCIM sharedRCIM] setGlobalMessageAvatarStyle:RC_USER_AVATAR_CYCLE];
     [[RCIM sharedRCIM] setEnablePersistentUserInfoCache:YES];
@@ -224,7 +224,13 @@
 }
 
 - (void)chat:(void (^)())successBlock error:(void (^)(NSError *))errorBlock {
-    
+    NSString *strEncode = [[NSString alloc] initWithData:_dataRequest.content.encode encoding:NSUTF8StringEncoding];
+    if ([self.delegate respondsToSelector:@selector(addToChat:content:houseId:houseName:)]) {
+        successBlock();
+        [self.delegate addToChat:_dataRequest.userId content:strEncode houseId:_dataRequest.houseId houseName:_dataRequest.houseName];
+    } else {
+        errorBlock([NSError errorWithDomain:@"Delegate方法未实现" code:500 userInfo:nil]);
+    }
 }
 
 - (NSArray *)sepExtraString:(NSString *)extra {
@@ -252,8 +258,8 @@
     if (!userId || userId.length == 0) {
         return completion(nil);
     } else {
-        if ([self.dataSource respondsToSelector:@selector(getUserInfoWithUserId:completion:)]) {
-            [self.dataSource getUserInfoWithUserId:userId completion:completion];
+        if ([self.delegate respondsToSelector:@selector(getUserInfoWithUserId:completion:)]) {
+            [self.delegate getUserInfoWithUserId:userId completion:completion];
         } else {
             return completion(nil);
         }
