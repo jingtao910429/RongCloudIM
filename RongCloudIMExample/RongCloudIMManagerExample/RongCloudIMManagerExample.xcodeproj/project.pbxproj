@@ -16,11 +16,9 @@
 		04AD18D21F5CE7E70050B28E /* RongCloudIMDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18CF1F5CE7E70050B28E /* RongCloudIMDataRequest.m */; };
 		04AD18D91F5CECAA0050B28E /* RCUserInfo+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18D81F5CECAA0050B28E /* RCUserInfo+Additions.m */; };
 		04AD18DC1F5CECDC0050B28E /* RCTextMessage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18DB1F5CECDC0050B28E /* RCTextMessage+Additions.m */; };
-		04AD18DE1F5D01190050B28E /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18DD1F5D01190050B28E /* MessageType.swift */; };
 		04AD18E11F5D1F3E0050B28E /* MessageType.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18E01F5D1F3E0050B28E /* MessageType.m */; };
 		04AD18E41F5D25E20050B28E /* MessageTypeEstate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18E31F5D25E20050B28E /* MessageTypeEstate.m */; };
 		04AD18E71F5D26170050B28E /* MessageCommonContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18E61F5D26170050B28E /* MessageCommonContent.m */; };
-		04AD18E91F5D26CF0050B28E /* MessageTypeEstate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD18E81F5D26CF0050B28E /* MessageTypeEstate.swift */; };
 		3532FA0D7B13E5F1D2C6C73C /* libPods-RongCloudIMManagerExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F700FDD0485A239C37BE8B10 /* libPods-RongCloudIMManagerExample.a */; };
 /* End PBXBuildFile section */
 
@@ -43,14 +41,12 @@
 		04AD18D81F5CECAA0050B28E /* RCUserInfo+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCUserInfo+Additions.m"; sourceTree = "<group>"; };
 		04AD18DA1F5CECDC0050B28E /* RCTextMessage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTextMessage+Additions.h"; sourceTree = "<group>"; };
 		04AD18DB1F5CECDC0050B28E /* RCTextMessage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTextMessage+Additions.m"; sourceTree = "<group>"; };
-		04AD18DD1F5D01190050B28E /* MessageType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
 		04AD18DF1F5D1F3E0050B28E /* MessageType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageType.h; sourceTree = "<group>"; };
 		04AD18E01F5D1F3E0050B28E /* MessageType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageType.m; sourceTree = "<group>"; };
 		04AD18E21F5D25E20050B28E /* MessageTypeEstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTypeEstate.h; sourceTree = "<group>"; };
 		04AD18E31F5D25E20050B28E /* MessageTypeEstate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTypeEstate.m; sourceTree = "<group>"; };
 		04AD18E51F5D26170050B28E /* MessageCommonContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCommonContent.h; sourceTree = "<group>"; };
 		04AD18E61F5D26170050B28E /* MessageCommonContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCommonContent.m; sourceTree = "<group>"; };
-		04AD18E81F5D26CF0050B28E /* MessageTypeEstate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTypeEstate.swift; sourceTree = "<group>"; };
 		0510B335D729EA8A71398F76 /* Pods-RongCloudIMManagerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudIMManagerExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RongCloudIMManagerExample/Pods-RongCloudIMManagerExample.release.xcconfig"; sourceTree = "<group>"; };
 		F700FDD0485A239C37BE8B10 /* libPods-RongCloudIMManagerExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RongCloudIMManagerExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,8 +99,6 @@
 		04AD18CB1F5CE7E70050B28E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				04AD18E81F5D26CF0050B28E /* MessageTypeEstate.swift */,
-				04AD18DD1F5D01190050B28E /* MessageType.swift */,
 				04AD18CC1F5CE7E70050B28E /* RongCloudIMCenterManager.h */,
 				04AD18CD1F5CE7E70050B28E /* RongCloudIMCenterManager.m */,
 				04AD18CE1F5CE7E70050B28E /* RongCloudIMDataRequest.h */,
@@ -276,13 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04AD18DE1F5D01190050B28E /* MessageType.swift in Sources */,
 				04416B781F5CE5F1005CEBBA /* ViewController.swift in Sources */,
 				04AD18E41F5D25E20050B28E /* MessageTypeEstate.m in Sources */,
 				04AD18D91F5CECAA0050B28E /* RCUserInfo+Additions.m in Sources */,
 				04AD18D21F5CE7E70050B28E /* RongCloudIMDataRequest.m in Sources */,
 				04416B761F5CE5F1005CEBBA /* AppDelegate.swift in Sources */,
-				04AD18E91F5D26CF0050B28E /* MessageTypeEstate.swift in Sources */,
 				04AD18E71F5D26170050B28E /* MessageCommonContent.m in Sources */,
 				04AD18D11F5CE7E70050B28E /* RongCloudIMCenterManager.m in Sources */,
 				04AD18DC1F5CECDC0050B28E /* RCTextMessage+Additions.m in Sources */,
