@@ -13,7 +13,6 @@
 		04416B7D1F5CE5F1005CEBBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04416B7C1F5CE5F1005CEBBA /* Assets.xcassets */; };
 		04416B801F5CE5F1005CEBBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04416B7E1F5CE5F1005CEBBA /* LaunchScreen.storyboard */; };
 		04C995DD202180A8000C1F58 /* RongTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C995DC202180A8000C1F58 /* RongTest.m */; };
-		04C9978220218515000C1F58 /* RongCloudIMFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C9978120218515000C1F58 /* RongCloudIMFrameWork.framework */; };
 		3532FA0D7B13E5F1D2C6C73C /* libPods-RongCloudIMManagerExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F700FDD0485A239C37BE8B10 /* libPods-RongCloudIMManagerExample.a */; };
 /* End PBXBuildFile section */
 
@@ -26,10 +25,11 @@
 		04416B7C1F5CE5F1005CEBBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04416B7F1F5CE5F1005CEBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04416B811F5CE5F1005CEBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		044AD9DF2021B55C0012E83C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		044AD9E12021B5650012E83C /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		04AD18C71F5CE7860050B28E /* RongCloudIMManagerExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RongCloudIMManagerExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		04C995DB202180A8000C1F58 /* RongTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RongTest.h; sourceTree = "<group>"; };
 		04C995DC202180A8000C1F58 /* RongTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RongTest.m; sourceTree = "<group>"; };
-		04C9978120218515000C1F58 /* RongCloudIMFrameWork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongCloudIMFrameWork.framework; sourceTree = "<group>"; };
 		0510B335D729EA8A71398F76 /* Pods-RongCloudIMManagerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudIMManagerExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RongCloudIMManagerExample/Pods-RongCloudIMManagerExample.release.xcconfig"; sourceTree = "<group>"; };
 		F700FDD0485A239C37BE8B10 /* libPods-RongCloudIMManagerExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RongCloudIMManagerExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -40,7 +40,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3532FA0D7B13E5F1D2C6C73C /* libPods-RongCloudIMManagerExample.a in Frameworks */,
-				04C9978220218515000C1F58 /* RongCloudIMFrameWork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +67,6 @@
 		04416B741F5CE5F1005CEBBA /* RongCloudIMManagerExample */ = {
 			isa = PBXGroup;
 			children = (
-				04C9978120218515000C1F58 /* RongCloudIMFrameWork.framework */,
 				04416B751F5CE5F1005CEBBA /* AppDelegate.swift */,
 				04416B771F5CE5F1005CEBBA /* ViewController.swift */,
 				04416B791F5CE5F1005CEBBA /* Main.storyboard */,
@@ -85,6 +83,8 @@
 		0820377BAEA0029496714F93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				044AD9E12021B5650012E83C /* libstdc++.tbd */,
+				044AD9DF2021B55C0012E83C /* libsqlite3.tbd */,
 				F700FDD0485A239C37BE8B10 /* libPods-RongCloudIMManagerExample.a */,
 			);
 			name = Frameworks;
@@ -179,11 +179,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RongCloudIMManagerExample/Pods-RongCloudIMManagerExample-resources.sh",
-				"${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/Emoji.plist",
-				"${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/RCConfig.plist",
-				"${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/en.lproj",
-				"${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/zh-Hans.lproj",
-				"${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/RongCloud.bundle",
+				"${PODS_ROOT}/TBRongCloudIMManager/RongCloudIM/Emoji.plist",
+				"${PODS_ROOT}/TBRongCloudIMManager/RongCloudIM/RCConfig.plist",
+				"${PODS_ROOT}/TBRongCloudIMManager/RongCloudIM/en.lproj",
+				"${PODS_ROOT}/TBRongCloudIMManager/RongCloudIM/zh-Hans.lproj",
+				"${PODS_ROOT}/TBRongCloudIMManager/RongCloudIM/RongCloud.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (

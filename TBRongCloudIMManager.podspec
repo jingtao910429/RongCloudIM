@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TBRongCloudIMManager"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "RongCloudIM‘s upper pack of TBRongCloudIMManager."
 
   s.description  = <<-DESC
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
 
   s.frameworks   = 'CoreLocation', 'CoreTelephony', 'AVFoundation', 'Contacts', 'AddressBook', 'AudioToolbox', 'SystemConfiguration', 'QuartzCore', 'CoreGraphics'
-  s.source_files = "Source/**/*.{h}", "RongCloudIM/RongIMKit.framework/Headers/RongIMKit.h", "RongCloudIM/RongIMLib.framework/Headers/RongIMLib.h"
+  s.source_files = "Source/**/*.{h, m}", "RongCloudIM/RongIMKit.framework/Headers/RongIMKit.h", "RongCloudIM/RongIMLib.framework/Headers/RongIMLib.h"
   s.vendored_frameworks = ["RongCloudIM/RongIMLib.framework", "RongCloudIM/RongIMKit.framework"]
   s.vendored_libraries = "RongCloudIM/libopencore-amrnb.a"
   s.resources = [

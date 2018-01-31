@@ -7,7 +7,13 @@
 //
 
 #import "RongTest.h"
+#import <RongIMKit/RongIMKit.h>
 
 @implementation RongTest
-
+- (instancetype)init{
+    if (self = [super init]) {
+        [RCIM sharedRCIM];
+    }
+    return self;
+}
 @end

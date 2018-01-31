@@ -7,4 +7,6 @@ target 'RongCloudIMManagerExample' do
 
 #   pod 'RongCloudIMLibrary'
 
+#pod 'TBRongCloudIMManager'
+
 end
