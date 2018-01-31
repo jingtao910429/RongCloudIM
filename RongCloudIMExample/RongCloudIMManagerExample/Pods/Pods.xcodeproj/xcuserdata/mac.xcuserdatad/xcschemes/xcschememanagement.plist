@@ -9,24 +9,8 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>RongCloudIMLibrary-Resources.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>331B0076EC77DCEBB9E5221F528CAA11</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8A883E8A51E8D37CC2DA4A3A184D6045</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

@@ -9,19 +9,24 @@
 #import <Foundation/Foundation.h>
 #import "RongCloudIMManager.h"
 
-typedef void*(^ConnectionStatusBlock)(RCConnectionStatus status);
-typedef void*(^OffLine)(BOOL offLine);
-typedef void*(^UpdateMessageCount)(NSInteger messageCount);
 
 @protocol IMCUserInfoDataSource <NSObject>
 
 @required
 - (void)getUserInfoWithUserId:(NSString *)userId
-                           completion:(void (^)(RCUserInfo *userInfo))completion;
+                   completion:(void (^)(RCUserInfo *userInfo))completion;
 @required
-- (void)addToChat:(NSString *)userId content:(NSString *)content houseId:(NSInteger)houseId houseName:(NSString *)houseName;
+- (void)addToChat:(NSString *)userId
+          content:(NSString *)content
+          houseId:(NSInteger)houseId
+        houseName:(NSString *)houseName;
 
 @end
+
+typedef void*(^ConnectionStatusBlock)(RCConnectionStatus status);
+typedef void*(^OffLine)(BOOL offLine);
+typedef void*(^UpdateMessageCount)(NSInteger messageCount);
+
 
 @interface RongCloudIMCenterManager : NSObject <RCIMUserInfoDataSource>
 
@@ -31,11 +36,13 @@ typedef void*(^UpdateMessageCount)(NSInteger messageCount);
 + (instancetype)manager;
 
 @property (nonatomic, weak) id <IMCUserInfoDataSource> delegate;
+
+#pragma mark - block
 @property (nonatomic, copy) ConnectionStatusBlock connectionStatusBlock;
 @property (nonatomic, copy) OffLine offLine;
 @property (nonatomic, copy) UpdateMessageCount updateMessageCount;
 
-#pragma mark 参数设置
+#pragma mark - 参数设置
 
 - (RongCloudIMCenterManager *)token:(NSString *)token;
 
@@ -55,6 +62,7 @@ typedef void*(^UpdateMessageCount)(NSInteger messageCount);
                                       content:(RCMessageContent *)content
                                       houseId:(NSInteger)houseId
                                     houseName:(NSString *)houseName;
+#pragma mark - 消息相关
 
 //消息配置
 - (void)config:(NSString *)key classes:(NSArray *)messageClasses dataSource:(id <IMCUserInfoDataSource>)delegate;

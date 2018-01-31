@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import RongCloudIMFrameWork
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        RongCloudIMCenterManager().sendMessages()
+        RongCloudIMCenterManager().disconnect()
         // Do any additional setup after loading the view, typically from a nib.
     }
 

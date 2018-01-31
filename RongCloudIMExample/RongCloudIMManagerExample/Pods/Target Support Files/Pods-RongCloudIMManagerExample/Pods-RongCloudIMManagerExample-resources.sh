@@ -83,20 +83,6 @@ EOM
       ;;
   esac
 }
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/Emoji.plist"
-  install_resource "${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/RCConfig.plist"
-  install_resource "${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/en.lproj"
-  install_resource "${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/zh-Hans.lproj"
-  install_resource "$PODS_CONFIGURATION_BUILD_DIR/RongCloudIMLibrary/Resources.bundle"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/Emoji.plist"
-  install_resource "${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/RCConfig.plist"
-  install_resource "${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/en.lproj"
-  install_resource "${PODS_ROOT}/RongCloudIMLibrary/RongCloudIM/zh-Hans.lproj"
-  install_resource "$PODS_CONFIGURATION_BUILD_DIR/RongCloudIMLibrary/Resources.bundle"
-fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

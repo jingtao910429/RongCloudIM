@@ -5,6 +5,6 @@ source 'https://github.com/jingtao910429/2BossSpecs.git'
 
 target 'RongCloudIMManagerExample' do
 
-   pod 'RongCloudIMLibrary’
+#   pod 'RongCloudIMLibrary'
 
 end
