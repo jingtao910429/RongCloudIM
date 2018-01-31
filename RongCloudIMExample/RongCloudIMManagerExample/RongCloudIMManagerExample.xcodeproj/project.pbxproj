@@ -19,18 +19,19 @@
 		044ADA4A2021CE100012E83C /* Emoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044ADA312021CE100012E83C /* Emoji.plist */; };
 		044ADA4B2021CE100012E83C /* RongCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 044ADA322021CE100012E83C /* RongCloud.bundle */; };
 		044ADA4C2021CE100012E83C /* RCConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044ADA332021CE100012E83C /* RCConfig.plist */; };
-		044ADA4D2021CE100012E83C /* RongCloudIMDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADA352021CE100012E83C /* RongCloudIMDataRequest.m */; };
-		044ADA4E2021CE100012E83C /* RCTextMessage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADA382021CE100012E83C /* RCTextMessage+Additions.m */; };
-		044ADA4F2021CE100012E83C /* RCUserInfo+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADA3A2021CE100012E83C /* RCUserInfo+Additions.m */; };
-		044ADA502021CE100012E83C /* RongCloudIMCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADA3C2021CE100012E83C /* RongCloudIMCenterManager.m */; };
-		044ADA512021CE100012E83C /* MessageCommonContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADA412021CE100012E83C /* MessageCommonContent.m */; };
-		044ADA522021CE100012E83C /* MessageTypeEstate.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADA422021CE100012E83C /* MessageTypeEstate.m */; };
-		044ADA532021CE100012E83C /* MessageType.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADA432021CE100012E83C /* MessageType.m */; };
 		044ADA542021CE370012E83C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 044AD9DF2021B55C0012E83C /* libsqlite3.tbd */; };
 		044ADA562021CE3F0012E83C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 044ADA552021CE3F0012E83C /* libz.tbd */; };
 		044ADA582021CE460012E83C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 044ADA572021CE460012E83C /* libxml2.tbd */; };
 		044ADA5A2021CE520012E83C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 044ADA592021CE520012E83C /* libc++.tbd */; };
 		044ADA5B2021CE5A0012E83C /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 044AD9E12021B5650012E83C /* libstdc++.tbd */; };
+		044ADAC520220E6C0012E83C /* RongCloudIMDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADAB820220E6C0012E83C /* RongCloudIMDataRequest.m */; };
+		044ADAC620220E6C0012E83C /* RCTextMessage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADABB20220E6C0012E83C /* RCTextMessage+Additions.m */; };
+		044ADAC720220E6C0012E83C /* MessageCommonContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADABC20220E6C0012E83C /* MessageCommonContent.m */; };
+		044ADAC820220E6C0012E83C /* RongCloudIMCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADABD20220E6C0012E83C /* RongCloudIMCenterManager.m */; };
+		044ADAC920220E6C0012E83C /* MessageTypeEstate.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADABF20220E6C0012E83C /* MessageTypeEstate.m */; };
+		044ADACA20220E6C0012E83C /* RCUserInfo+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADAC120220E6C0012E83C /* RCUserInfo+Additions.m */; };
+		044ADACB20220E6C0012E83C /* MessageType.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADAC220220E6C0012E83C /* MessageType.m */; };
+		044ADACD20220E7C0012E83C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044ADACC20220E7C0012E83C /* File.swift */; };
 		04C995DD202180A8000C1F58 /* RongTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C995DC202180A8000C1F58 /* RongTest.m */; };
 		3532FA0D7B13E5F1D2C6C73C /* libPods-RongCloudIMManagerExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F700FDD0485A239C37BE8B10 /* libPods-RongCloudIMManagerExample.a */; };
 /* End PBXBuildFile section */
@@ -54,23 +55,24 @@
 		044ADA312021CE100012E83C /* Emoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Emoji.plist; sourceTree = "<group>"; };
 		044ADA322021CE100012E83C /* RongCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RongCloud.bundle; sourceTree = "<group>"; };
 		044ADA332021CE100012E83C /* RCConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RCConfig.plist; sourceTree = "<group>"; };
-		044ADA352021CE100012E83C /* RongCloudIMDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RongCloudIMDataRequest.m; sourceTree = "<group>"; };
-		044ADA372021CE100012E83C /* RCUserInfo+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCUserInfo+Additions.h"; sourceTree = "<group>"; };
-		044ADA382021CE100012E83C /* RCTextMessage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTextMessage+Additions.m"; sourceTree = "<group>"; };
-		044ADA392021CE100012E83C /* RCTextMessage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTextMessage+Additions.h"; sourceTree = "<group>"; };
-		044ADA3A2021CE100012E83C /* RCUserInfo+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCUserInfo+Additions.m"; sourceTree = "<group>"; };
-		044ADA3C2021CE100012E83C /* RongCloudIMCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RongCloudIMCenterManager.m; sourceTree = "<group>"; };
-		044ADA3D2021CE100012E83C /* RongCloudIMCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RongCloudIMCenterManager.h; sourceTree = "<group>"; };
-		044ADA3F2021CE100012E83C /* MessageTypeEstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTypeEstate.h; sourceTree = "<group>"; };
-		044ADA402021CE100012E83C /* MessageType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageType.h; sourceTree = "<group>"; };
-		044ADA412021CE100012E83C /* MessageCommonContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCommonContent.m; sourceTree = "<group>"; };
-		044ADA422021CE100012E83C /* MessageTypeEstate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTypeEstate.m; sourceTree = "<group>"; };
-		044ADA432021CE100012E83C /* MessageType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageType.m; sourceTree = "<group>"; };
-		044ADA442021CE100012E83C /* MessageCommonContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCommonContent.h; sourceTree = "<group>"; };
-		044ADA452021CE100012E83C /* RongCloudIMDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RongCloudIMDataRequest.h; sourceTree = "<group>"; };
 		044ADA552021CE3F0012E83C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		044ADA572021CE460012E83C /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		044ADA592021CE520012E83C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		044ADAB720220E6C0012E83C /* MessageTypeEstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTypeEstate.h; sourceTree = "<group>"; };
+		044ADAB820220E6C0012E83C /* RongCloudIMDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RongCloudIMDataRequest.m; sourceTree = "<group>"; };
+		044ADAB920220E6C0012E83C /* MessageType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageType.h; sourceTree = "<group>"; };
+		044ADABA20220E6C0012E83C /* RCUserInfo+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCUserInfo+Additions.h"; sourceTree = "<group>"; };
+		044ADABB20220E6C0012E83C /* RCTextMessage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTextMessage+Additions.m"; sourceTree = "<group>"; };
+		044ADABC20220E6C0012E83C /* MessageCommonContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCommonContent.m; sourceTree = "<group>"; };
+		044ADABD20220E6C0012E83C /* RongCloudIMCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RongCloudIMCenterManager.m; sourceTree = "<group>"; };
+		044ADABE20220E6C0012E83C /* RongCloudIMDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RongCloudIMDataRequest.h; sourceTree = "<group>"; };
+		044ADABF20220E6C0012E83C /* MessageTypeEstate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTypeEstate.m; sourceTree = "<group>"; };
+		044ADAC020220E6C0012E83C /* RCTextMessage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTextMessage+Additions.h"; sourceTree = "<group>"; };
+		044ADAC120220E6C0012E83C /* RCUserInfo+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCUserInfo+Additions.m"; sourceTree = "<group>"; };
+		044ADAC220220E6C0012E83C /* MessageType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageType.m; sourceTree = "<group>"; };
+		044ADAC320220E6C0012E83C /* RongCloudIMCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RongCloudIMCenterManager.h; sourceTree = "<group>"; };
+		044ADAC420220E6C0012E83C /* MessageCommonContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCommonContent.h; sourceTree = "<group>"; };
+		044ADACC20220E7C0012E83C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		04AD18C71F5CE7860050B28E /* RongCloudIMManagerExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RongCloudIMManagerExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		04C995DB202180A8000C1F58 /* RongTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RongTest.h; sourceTree = "<group>"; };
 		04C995DC202180A8000C1F58 /* RongTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RongTest.m; sourceTree = "<group>"; };
@@ -119,8 +121,8 @@
 		04416B741F5CE5F1005CEBBA /* RongCloudIMManagerExample */ = {
 			isa = PBXGroup;
 			children = (
+				044ADAB620220E6C0012E83C /* Source */,
 				044ADA2A2021CE100012E83C /* RongCloudIM */,
-				044ADA342021CE100012E83C /* Source */,
 				04416B751F5CE5F1005CEBBA /* AppDelegate.swift */,
 				04416B771F5CE5F1005CEBBA /* ViewController.swift */,
 				04416B791F5CE5F1005CEBBA /* Main.storyboard */,
@@ -148,50 +150,27 @@
 			path = RongCloudIM;
 			sourceTree = "<group>";
 		};
-		044ADA342021CE100012E83C /* Source */ = {
+		044ADAB620220E6C0012E83C /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				044ADA352021CE100012E83C /* RongCloudIMDataRequest.m */,
-				044ADA362021CE100012E83C /* TBCategory */,
-				044ADA3B2021CE100012E83C /* TBRongCloudManager */,
-				044ADA3E2021CE100012E83C /* TBProtocol */,
-				044ADA452021CE100012E83C /* RongCloudIMDataRequest.h */,
+				044ADAB720220E6C0012E83C /* MessageTypeEstate.h */,
+				044ADAB820220E6C0012E83C /* RongCloudIMDataRequest.m */,
+				044ADAB920220E6C0012E83C /* MessageType.h */,
+				044ADABA20220E6C0012E83C /* RCUserInfo+Additions.h */,
+				044ADABB20220E6C0012E83C /* RCTextMessage+Additions.m */,
+				044ADABC20220E6C0012E83C /* MessageCommonContent.m */,
+				044ADABD20220E6C0012E83C /* RongCloudIMCenterManager.m */,
+				044ADABE20220E6C0012E83C /* RongCloudIMDataRequest.h */,
+				044ADABF20220E6C0012E83C /* MessageTypeEstate.m */,
+				044ADAC020220E6C0012E83C /* RCTextMessage+Additions.h */,
+				044ADAC120220E6C0012E83C /* RCUserInfo+Additions.m */,
+				044ADAC220220E6C0012E83C /* MessageType.m */,
+				044ADAC320220E6C0012E83C /* RongCloudIMCenterManager.h */,
+				044ADAC420220E6C0012E83C /* MessageCommonContent.h */,
+				044ADACC20220E7C0012E83C /* File.swift */,
 			);
 			name = Source;
-			path = "../../../../../../未命名文件夹/RongCloudIMFrameWork/RongCloudIMFrameWork/Source";
-			sourceTree = "<group>";
-		};
-		044ADA362021CE100012E83C /* TBCategory */ = {
-			isa = PBXGroup;
-			children = (
-				044ADA372021CE100012E83C /* RCUserInfo+Additions.h */,
-				044ADA382021CE100012E83C /* RCTextMessage+Additions.m */,
-				044ADA392021CE100012E83C /* RCTextMessage+Additions.h */,
-				044ADA3A2021CE100012E83C /* RCUserInfo+Additions.m */,
-			);
-			path = TBCategory;
-			sourceTree = "<group>";
-		};
-		044ADA3B2021CE100012E83C /* TBRongCloudManager */ = {
-			isa = PBXGroup;
-			children = (
-				044ADA3C2021CE100012E83C /* RongCloudIMCenterManager.m */,
-				044ADA3D2021CE100012E83C /* RongCloudIMCenterManager.h */,
-			);
-			path = TBRongCloudManager;
-			sourceTree = "<group>";
-		};
-		044ADA3E2021CE100012E83C /* TBProtocol */ = {
-			isa = PBXGroup;
-			children = (
-				044ADA3F2021CE100012E83C /* MessageTypeEstate.h */,
-				044ADA402021CE100012E83C /* MessageType.h */,
-				044ADA412021CE100012E83C /* MessageCommonContent.m */,
-				044ADA422021CE100012E83C /* MessageTypeEstate.m */,
-				044ADA432021CE100012E83C /* MessageType.m */,
-				044ADA442021CE100012E83C /* MessageCommonContent.h */,
-			);
-			path = TBProtocol;
+			path = ../../../Source;
 			sourceTree = "<group>";
 		};
 		0820377BAEA0029496714F93 /* Frameworks */ = {
@@ -357,15 +336,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				04416B781F5CE5F1005CEBBA /* ViewController.swift in Sources */,
-				044ADA502021CE100012E83C /* RongCloudIMCenterManager.m in Sources */,
-				044ADA522021CE100012E83C /* MessageTypeEstate.m in Sources */,
-				044ADA512021CE100012E83C /* MessageCommonContent.m in Sources */,
-				044ADA4F2021CE100012E83C /* RCUserInfo+Additions.m in Sources */,
-				044ADA4D2021CE100012E83C /* RongCloudIMDataRequest.m in Sources */,
+				044ADACA20220E6C0012E83C /* RCUserInfo+Additions.m in Sources */,
+				044ADAC820220E6C0012E83C /* RongCloudIMCenterManager.m in Sources */,
+				044ADAC520220E6C0012E83C /* RongCloudIMDataRequest.m in Sources */,
+				044ADAC920220E6C0012E83C /* MessageTypeEstate.m in Sources */,
+				044ADAC720220E6C0012E83C /* MessageCommonContent.m in Sources */,
 				04416B761F5CE5F1005CEBBA /* AppDelegate.swift in Sources */,
-				044ADA532021CE100012E83C /* MessageType.m in Sources */,
+				044ADACB20220E6C0012E83C /* MessageType.m in Sources */,
 				04C995DD202180A8000C1F58 /* RongTest.m in Sources */,
-				044ADA4E2021CE100012E83C /* RCTextMessage+Additions.m in Sources */,
+				044ADACD20220E7C0012E83C /* File.swift in Sources */,
+				044ADAC620220E6C0012E83C /* RCTextMessage+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
