@@ -3,5 +3,4 @@
 //
 
 #import <RongIMKit/RongIMKit.h>
-#import <TBRongCloudIMManager/MessageCommonContent.h>
 
