@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
 
 
   s.frameworks   = 'CoreLocation', 'CoreTelephony', 'AVFoundation', 'Contacts', 'AddressBook', 'AudioToolbox', 'SystemConfiguration', 'QuartzCore', 'CoreGraphics'
-  s.source_files = "Source/*.{h,m}", "RongCloudIM/RongIMKit.framework/Headers/RongIMKit.h", "RongCloudIM/RongIMLib.framework/Headers/RongIMLib.h"
+  s.source_files = "Source/*.{h,m}", "RongCloudIM/RongIMKit.framework/Headers/*.{h}", "RongCloudIM/RongIMLib.framework/Headers/*.{h}"
+  s.public_header_files = "Source/*.{h}", "RongCloudIM/RongIMKit.framework/Headers/*.{h}", "RongCloudIM/RongIMLib.framework/Headers/*.{h}"
   s.vendored_frameworks = ["RongCloudIM/RongIMLib.framework", "RongCloudIM/RongIMKit.framework"]
   s.vendored_libraries = "RongCloudIM/libopencore-amrnb.a"
   s.resources = [
