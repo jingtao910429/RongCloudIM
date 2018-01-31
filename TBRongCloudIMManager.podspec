@@ -27,7 +27,6 @@ Pod::Spec.new do |s|
     "RongCloudIM/RongCloud.bundle"
   ]
   s.libraries = "sqlite3.0", "c++", "xml2", "stdc++", "z"
-  s.xcconfig  = { "LIBRARY_SEARCH_PATHS" => "\"$(PODS_ROOT)/TBRongCloudIMManager/**\"" }
   s.user_target_xcconfig =  {'OTHER_LINKER_FLAGS' => ['-lObjC','-all_load']}
   s.pod_target_xcconfig = {'OTHER_LDFLAGS' => ['-lObjC','-all_load']}
   s.requires_arc = true
