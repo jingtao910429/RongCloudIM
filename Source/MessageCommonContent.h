@@ -6,9 +6,10 @@
 //  Copyright © 2017年 LiYou. All rights reserved.
 //
 
-#import <RongIMLib/RongIMLib.h>
+//#import <RongIMLib/RongIMLib.h>
 #import "MessageCommonContent.h"
 
+@class RCMessageContent;
 @interface MessageCommonContent : RCMessageContent
 + (NSString *)getObjectName;
 @end
