@@ -15,7 +15,7 @@
 #import <RongIMKit/RongIMKit.h>
 #import <RongIMKit/RCThemeDefine.h>
 
-@interface RongCloudIMCenterManager ()
+@interface RongCloudIMCenterManager () <RCIMUserInfoDataSource, RCIMConnectionStatusDelegate, RCIMReceiveMessageDelegate>
 
 @property (nonatomic, strong) RongCloudIMDataRequest *dataRequest;
 
@@ -102,9 +102,12 @@
     [shared registerMessageType:[MessageType class]];
     [shared registerMessageType:[MessageTypeEstate class]];
     [shared setGlobalMessageAvatarStyle:RC_USER_AVATAR_CYCLE];
-//    RCIM.shared().globalMessageAvatarStyle = RCUserAvatarStyle.USER_AVATAR_CYCLE
-//    RCIM.shared().enablePersistentUserInfoCache = true
-//    RCIM.shared().enableTypingStatus = true
+    [shared setEnablePersistentUserInfoCache:YES];
+    [shared setEnableTypingStatus:YES];
+    [shared setUserInfoDataSource:self];
+    [shared setConnectionStatusDelegate:self];
+    [shared setReceiveMessageDelegate:self];
+    
 //    RCIM.shared().userInfoDataSource = self
 //    RCIM.shared().connectionStatusDelegate = self
 //    RCIM.shared().receiveMessageDelegate = self

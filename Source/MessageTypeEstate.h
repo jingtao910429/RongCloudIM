@@ -30,8 +30,6 @@
 
 - (NSData *)encode;
 - (void)decodeWithData:(NSData *)data;
-
-
 - (NSString *)conversationDigest;
 
 @end
