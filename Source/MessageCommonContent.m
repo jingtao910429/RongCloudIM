@@ -6,6 +6,7 @@
 //  Copyright © 2017年 LiYou. All rights reserved.
 //
 
+#import <RongIMLib/RongIMLib.h>
 #import "MessageCommonContent.h"
 
 @implementation MessageCommonContent
