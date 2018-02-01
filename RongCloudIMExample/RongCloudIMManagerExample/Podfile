@@ -5,7 +5,7 @@ source 'https://github.com/jingtao910429/2BossSpecs.git'
 
 target 'RongCloudIMManagerExample' do
 
-#   pod 'RongCloudIMLibrary'
+#   pod 'RongCloudIMLibrary', '~> 0.0.8'
 
 #pod 'TBRongCloudIMManager', '~> 0.0.3'
 
