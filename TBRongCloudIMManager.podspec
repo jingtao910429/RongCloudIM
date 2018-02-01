@@ -67,8 +67,8 @@ Pod::Spec.new do |s|
   # end
   
   s.source_files = "Source/*.{h,m}"
-  s.dependency 'RongCloudIMLibrary', '~> 0.0.8'
-
+  s.dependency 'RongCloudIM/IMKit', '2.8.26'
+  s.static_framework = true
   
   s.user_target_xcconfig =  {'OTHER_LINKER_FLAGS' => ['-lObjC','-all_load']}
   s.pod_target_xcconfig = {'OTHER_LDFLAGS' => ['-lObjC','-all_load']}
