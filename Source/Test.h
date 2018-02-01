@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RongIMLib/RongIMLib.h>
 
 @interface Test : NSObject
 
