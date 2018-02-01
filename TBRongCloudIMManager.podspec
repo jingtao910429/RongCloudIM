@@ -20,8 +20,9 @@ Pod::Spec.new do |s|
   s.dependency 'RongCloudIM/IMKit', '2.8.26'
   s.static_framework = true
   
-  s.user_target_xcconfig =  {'OTHER_LINKER_FLAGS' => ['-lObjC','-all_load']}
-  s.pod_target_xcconfig = {'OTHER_LDFLAGS' => ['-lObjC','-all_load']}
+  s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
+  # s.user_target_xcconfig =  {'OTHER_LINKER_FLAGS' => ['-lObjC','-all_load']}
+  # s.pod_target_xcconfig = {'OTHER_LDFLAGS' => ['-lObjC','-all_load']}
 
   s.requires_arc = true
 end
