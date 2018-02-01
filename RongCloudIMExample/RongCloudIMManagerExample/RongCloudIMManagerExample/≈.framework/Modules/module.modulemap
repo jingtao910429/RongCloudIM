@@ -1,6 +1,0 @@
-framework module RongCloudIMFrameWork {
-  umbrella header "RongCloudIMFrameWork.h"
-
-  export *
-  module * { export * }
-}
