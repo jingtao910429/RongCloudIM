@@ -7,29 +7,93 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9965CE47AB147D9ADC8C635DC36D4A1A /* Pods-RongCloudIMManagerExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A958068E56874B288EA6729375C113C /* Pods-RongCloudIMManagerExample-dummy.m */; };
-		AD540748C8DEEB765D1891EF827F73E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		03C2AE8314A20CE4785E16C8437E1DE8 /* RongCloudIMDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B02EED10985888E9E98E12B1B20D10D4 /* RongCloudIMDataRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		198868B3944DC4B0B5983B6DA810F2BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1D627B5559B9D3A02D71882366435479 /* RCUserInfo+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 839D680A04ABC5A03DB236B63B088DAF /* RCUserInfo+Additions.m */; };
+		25958FD62B8866B696AB715EAFBA0C8E /* TBRongCloudIMManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EA1737B079DE42D27DE0756D589A6A /* TBRongCloudIMManager-dummy.m */; };
+		285FC461786D81B8C693D81AD8F5EA59 /* MessageCommonContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 167F33846F89F35D546C83BF6DDFA6D7 /* MessageCommonContent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		41F815A532A9A9F7CD1E531D95BA2D1F /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE2F9F6327931B1BFB0463520640B /* Test.m */; };
+		4AF5BAF2A7EBC2AECA2755B5990565CD /* MessageType.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402FA2A67CEC0C382E5A03C08F797B4 /* MessageType.m */; };
+		5713780B8425D30E6183478D46388413 /* RongCloudIMCenterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A631AFFBDAF439DBED377C437FB240DD /* RongCloudIMCenterManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5984A77F0142FB0E35A1E332013E7ACB /* MessageTypeEstate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A13B09C929C3E5A3327CDC1E60FE10E /* MessageTypeEstate.m */; };
+		726E50D68FD34A656991B1B4143B2305 /* Pods-RongCloudIMManagerExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A958068E56874B288EA6729375C113C /* Pods-RongCloudIMManagerExample-dummy.m */; };
+		72A94529C5248317BA05D33FFDD4C0AE /* RCTextMessage+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = C529D8C4DE177CFC8FE51991D222EDBB /* RCTextMessage+Additions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7FD335D18AFEB2C27AF928735FD2767B /* RongCloudIMDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 730C967D7EF9E3583BA44CD1E740F13B /* RongCloudIMDataRequest.m */; };
+		8C38626DCA3077DBABCE96E08279AD6A /* MessageType.h in Headers */ = {isa = PBXBuildFile; fileRef = 529D2DD280D4CBB12FB01D199EE3BA1D /* MessageType.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9A2DE577A6195A1D98B3DE61027356FD /* RongCloudIMCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C47CB07BF9BF7230DF3AFA70D39DA0 /* RongCloudIMCenterManager.m */; };
+		A25B83AC75D959A96AD0558511604024 /* MessageCommonContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7268E4ECD90415F91CB0925C1F87F9 /* MessageCommonContent.m */; };
+		BCC44210C925ADA465B3BB64C778C976 /* Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 58E48AA56A70FADF290D6AE3B6266BE5 /* Test.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D346FFAF8327D7484B642970DB4BC204 /* RCUserInfo+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = D79DFCD66E92513D1848F5A8466401C1 /* RCUserInfo+Additions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F156ADE14799A35C9FFA2AF671AB4EA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		F77632B0B94FF5867CBAEBFD99062E19 /* RCTextMessage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D04D6DD5FCDD697C8D7526477F784 /* RCTextMessage+Additions.m */; };
+		FD25F20759672217AB01CE8D3F9F5DCF /* MessageTypeEstate.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B7D2EE6A54C95326D529E18437AA2C /* MessageTypeEstate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2915FB4343D06A50A0F955810174CC3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2705F071F7DAFC337C2BBF4D69E2DFAB;
+			remoteInfo = TBRongCloudIMManager;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		167F33846F89F35D546C83BF6DDFA6D7 /* MessageCommonContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessageCommonContent.h; path = Source/MessageCommonContent.h; sourceTree = "<group>"; };
+		24C8934DBD880E5BC2C1ED95A8004B44 /* libopencore-amrnb.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "libopencore-amrnb.a"; path = "RongCloudIM/libopencore-amrnb.a"; sourceTree = "<group>"; };
+		256C1B7F3388D8D0B089043EAA51FDF7 /* libTBRongCloudIMManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTBRongCloudIMManager.a; path = libTBRongCloudIMManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		37C4D6E4754550DE476D46E99338B0D9 /* RongCloud.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = RongCloud.bundle; path = RongCloudIM/RongCloud.bundle; sourceTree = "<group>"; };
 		443D387AC44958BF7FA2821B4F1AC1AC /* Pods-RongCloudIMManagerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RongCloudIMManagerExample.release.xcconfig"; sourceTree = "<group>"; };
+		4D1BA36E58ABA527682328942BE32458 /* libPods-RongCloudIMManagerExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RongCloudIMManagerExample.a"; path = "libPods-RongCloudIMManagerExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		529D2DD280D4CBB12FB01D199EE3BA1D /* MessageType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessageType.h; path = Source/MessageType.h; sourceTree = "<group>"; };
+		58E48AA56A70FADF290D6AE3B6266BE5 /* Test.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Test.h; path = Source/Test.h; sourceTree = "<group>"; };
 		5E5EEE644725860175BB3C5758E99484 /* Pods-RongCloudIMManagerExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RongCloudIMManagerExample-frameworks.sh"; sourceTree = "<group>"; };
+		63B7D2EE6A54C95326D529E18437AA2C /* MessageTypeEstate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessageTypeEstate.h; path = Source/MessageTypeEstate.h; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		66D6B2376511AC0D0163256934678F23 /* Pods-RongCloudIMManagerExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RongCloudIMManagerExample-resources.sh"; sourceTree = "<group>"; };
+		730C967D7EF9E3583BA44CD1E740F13B /* RongCloudIMDataRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RongCloudIMDataRequest.m; path = Source/RongCloudIMDataRequest.m; sourceTree = "<group>"; };
+		7A13B09C929C3E5A3327CDC1E60FE10E /* MessageTypeEstate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MessageTypeEstate.m; path = Source/MessageTypeEstate.m; sourceTree = "<group>"; };
 		82B88ABB41A65FD83EB0E253EA666BBF /* Pods-RongCloudIMManagerExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RongCloudIMManagerExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		839D680A04ABC5A03DB236B63B088DAF /* RCUserInfo+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RCUserInfo+Additions.m"; path = "Source/RCUserInfo+Additions.m"; sourceTree = "<group>"; };
+		8402FA2A67CEC0C382E5A03C08F797B4 /* MessageType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MessageType.m; path = Source/MessageType.m; sourceTree = "<group>"; };
 		8A958068E56874B288EA6729375C113C /* Pods-RongCloudIMManagerExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RongCloudIMManagerExample-dummy.m"; sourceTree = "<group>"; };
 		8FFDA80519036DD6E91D56E550F35D23 /* Pods-RongCloudIMManagerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RongCloudIMManagerExample.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C7268E4ECD90415F91CB0925C1F87F9 /* MessageCommonContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MessageCommonContent.m; path = Source/MessageCommonContent.m; sourceTree = "<group>"; };
+		9FF0FE4C98ED42F7A9050B32EC19436F /* Emoji.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Emoji.plist; path = RongCloudIM/Emoji.plist; sourceTree = "<group>"; };
+		A631AFFBDAF439DBED377C437FB240DD /* RongCloudIMCenterManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RongCloudIMCenterManager.h; path = Source/RongCloudIMCenterManager.h; sourceTree = "<group>"; };
+		ABEDB4033DA08D4FF42DA8E89F12F588 /* TBRongCloudIMManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TBRongCloudIMManager.xcconfig; sourceTree = "<group>"; };
+		AF8B86080C81A5634DC71CCBC4C3D368 /* RongIMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RongIMKit.framework; path = RongCloudIM/RongIMKit.framework; sourceTree = "<group>"; };
+		B02EED10985888E9E98E12B1B20D10D4 /* RongCloudIMDataRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RongCloudIMDataRequest.h; path = Source/RongCloudIMDataRequest.h; sourceTree = "<group>"; };
+		B5E63B2283B658CEBE6E5B743C876222 /* TBRongCloudIMManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBRongCloudIMManager-prefix.pch"; sourceTree = "<group>"; };
+		B7D41280A86F25B6DEC33BF9F26119C0 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "RongCloudIM/zh-Hans.lproj"; sourceTree = "<group>"; };
+		C529D8C4DE177CFC8FE51991D222EDBB /* RCTextMessage+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RCTextMessage+Additions.h"; path = "Source/RCTextMessage+Additions.h"; sourceTree = "<group>"; };
+		CB0D04D6DD5FCDD697C8D7526477F784 /* RCTextMessage+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RCTextMessage+Additions.m"; path = "Source/RCTextMessage+Additions.m"; sourceTree = "<group>"; };
+		D79DFCD66E92513D1848F5A8466401C1 /* RCUserInfo+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RCUserInfo+Additions.h"; path = "Source/RCUserInfo+Additions.h"; sourceTree = "<group>"; };
+		DD6CE2F9F6327931B1BFB0463520640B /* Test.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Test.m; path = Source/Test.m; sourceTree = "<group>"; };
+		E3EA1737B079DE42D27DE0756D589A6A /* TBRongCloudIMManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TBRongCloudIMManager-dummy.m"; sourceTree = "<group>"; };
 		E4B8C4237E65D0983AF73C1AB880D7D4 /* Pods-RongCloudIMManagerExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RongCloudIMManagerExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F923B564C39CADE3CA73CDB693212D9F /* libPods-RongCloudIMManagerExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RongCloudIMManagerExample.a"; path = "libPods-RongCloudIMManagerExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB7A7723864557E268543941AE784D66 /* RCConfig.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = RCConfig.plist; path = RongCloudIM/RCConfig.plist; sourceTree = "<group>"; };
+		EC10FECD8FD9C0CBF0DE3A23170F83C3 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = RongCloudIM/en.lproj; sourceTree = "<group>"; };
+		EF27A2E3AF4552C589F86C432400C2E5 /* RongIMLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RongIMLib.framework; path = RongCloudIM/RongIMLib.framework; sourceTree = "<group>"; };
+		F5C47CB07BF9BF7230DF3AFA70D39DA0 /* RongCloudIMCenterManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RongCloudIMCenterManager.m; path = Source/RongCloudIMCenterManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C25603466246B58F04E3940310F19198 /* Frameworks */ = {
+		71F0B3EFAFBC5D64FBCE41647E76E8BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD540748C8DEEB765D1891EF827F73E0 /* Foundation.framework in Frameworks */,
+				F156ADE14799A35C9FFA2AF671AB4EA9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C63C3646F2744CB2035595CEF688C9BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198868B3944DC4B0B5983B6DA810F2BB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,14 +115,64 @@
 			path = "Target Support Files/Pods-RongCloudIMManagerExample";
 			sourceTree = "<group>";
 		};
+		25E1109D0178D9F7A48BE549A4CFDD25 /* IMKit */ = {
+			isa = PBXGroup;
+			children = (
+				BD651817B2DDEB458B919FC24768175D /* Frameworks */,
+				89D930711117B4966CB22BDC6F2FF7F5 /* Resources */,
+			);
+			name = IMKit;
+			sourceTree = "<group>";
+		};
+		267A82B577CFAD2CE1113822AF17EECB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D1BA36E58ABA527682328942BE32458 /* libPods-RongCloudIMManagerExample.a */,
+				256C1B7F3388D8D0B089043EAA51FDF7 /* libTBRongCloudIMManager.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C5157C5A7054568EF3362F536127546 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABEDB4033DA08D4FF42DA8E89F12F588 /* TBRongCloudIMManager.xcconfig */,
+				E3EA1737B079DE42D27DE0756D589A6A /* TBRongCloudIMManager-dummy.m */,
+				B5E63B2283B658CEBE6E5B743C876222 /* TBRongCloudIMManager-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TBRongCloudIMManager";
+			sourceTree = "<group>";
+		};
+		60EC6981CDB7780172EAB91DBA6C8DDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24C8934DBD880E5BC2C1ED95A8004B44 /* libopencore-amrnb.a */,
+				EF27A2E3AF4552C589F86C432400C2E5 /* RongIMLib.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				DF5998572AE2BC1FC2E3E6447DA7EED0 /* Products */,
+				A01D2184A3FFE34FF00D9F2E9610C75A /* Pods */,
+				267A82B577CFAD2CE1113822AF17EECB /* Products */,
 				99D65C74DE1C962791C03240C8C682A9 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		89D930711117B4966CB22BDC6F2FF7F5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9FF0FE4C98ED42F7A9050B32EC19436F /* Emoji.plist */,
+				EC10FECD8FD9C0CBF0DE3A23170F83C3 /* en.lproj */,
+				37C4D6E4754550DE476D46E99338B0D9 /* RongCloud.bundle */,
+				B7D41280A86F25B6DEC33BF9F26119C0 /* zh-Hans.lproj */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		99D65C74DE1C962791C03240C8C682A9 /* Targets Support Files */ = {
@@ -69,12 +183,48 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		A01D2184A3FFE34FF00D9F2E9610C75A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0CCF648C4820252879303B8914FB42F /* RongCloudIM */,
+				FA140CAA84832E07E9C24FE4C7FF9482 /* TBRongCloudIMManager */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B0CCF648C4820252879303B8914FB42F /* RongCloudIM */ = {
+			isa = PBXGroup;
+			children = (
+				25E1109D0178D9F7A48BE549A4CFDD25 /* IMKit */,
+				C66A1B4B01D273F31FF8B7AF1DCD5164 /* IMLib */,
+			);
+			name = RongCloudIM;
+			path = RongCloudIM;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD651817B2DDEB458B919FC24768175D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF8B86080C81A5634DC71CCBC4C3D368 /* RongIMKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C66A1B4B01D273F31FF8B7AF1DCD5164 /* IMLib */ = {
+			isa = PBXGroup;
+			children = (
+				60EC6981CDB7780172EAB91DBA6C8DDA /* Frameworks */,
+				F1445EFA21286401C3C51184190D4810 /* Resources */,
+			);
+			name = IMLib;
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -85,31 +235,92 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		DF5998572AE2BC1FC2E3E6447DA7EED0 /* Products */ = {
+		F1445EFA21286401C3C51184190D4810 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F923B564C39CADE3CA73CDB693212D9F /* libPods-RongCloudIMManagerExample.a */,
+				EB7A7723864557E268543941AE784D66 /* RCConfig.plist */,
 			);
-			name = Products;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FA140CAA84832E07E9C24FE4C7FF9482 /* TBRongCloudIMManager */ = {
+			isa = PBXGroup;
+			children = (
+				167F33846F89F35D546C83BF6DDFA6D7 /* MessageCommonContent.h */,
+				9C7268E4ECD90415F91CB0925C1F87F9 /* MessageCommonContent.m */,
+				529D2DD280D4CBB12FB01D199EE3BA1D /* MessageType.h */,
+				8402FA2A67CEC0C382E5A03C08F797B4 /* MessageType.m */,
+				63B7D2EE6A54C95326D529E18437AA2C /* MessageTypeEstate.h */,
+				7A13B09C929C3E5A3327CDC1E60FE10E /* MessageTypeEstate.m */,
+				C529D8C4DE177CFC8FE51991D222EDBB /* RCTextMessage+Additions.h */,
+				CB0D04D6DD5FCDD697C8D7526477F784 /* RCTextMessage+Additions.m */,
+				D79DFCD66E92513D1848F5A8466401C1 /* RCUserInfo+Additions.h */,
+				839D680A04ABC5A03DB236B63B088DAF /* RCUserInfo+Additions.m */,
+				A631AFFBDAF439DBED377C437FB240DD /* RongCloudIMCenterManager.h */,
+				F5C47CB07BF9BF7230DF3AFA70D39DA0 /* RongCloudIMCenterManager.m */,
+				B02EED10985888E9E98E12B1B20D10D4 /* RongCloudIMDataRequest.h */,
+				730C967D7EF9E3583BA44CD1E740F13B /* RongCloudIMDataRequest.m */,
+				58E48AA56A70FADF290D6AE3B6266BE5 /* Test.h */,
+				DD6CE2F9F6327931B1BFB0463520640B /* Test.m */,
+				4C5157C5A7054568EF3362F536127546 /* Support Files */,
+			);
+			name = TBRongCloudIMManager;
+			path = TBRongCloudIMManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		B388033F6972F1264A5253B1576ADA39 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				285FC461786D81B8C693D81AD8F5EA59 /* MessageCommonContent.h in Headers */,
+				8C38626DCA3077DBABCE96E08279AD6A /* MessageType.h in Headers */,
+				FD25F20759672217AB01CE8D3F9F5DCF /* MessageTypeEstate.h in Headers */,
+				72A94529C5248317BA05D33FFDD4C0AE /* RCTextMessage+Additions.h in Headers */,
+				D346FFAF8327D7484B642970DB4BC204 /* RCUserInfo+Additions.h in Headers */,
+				5713780B8425D30E6183478D46388413 /* RongCloudIMCenterManager.h in Headers */,
+				03C2AE8314A20CE4785E16C8437E1DE8 /* RongCloudIMDataRequest.h in Headers */,
+				BCC44210C925ADA465B3BB64C778C976 /* Test.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		2B00B25A82DAA46BC025EDA404578D53 /* Pods-RongCloudIMManagerExample */ = {
+		2705F071F7DAFC337C2BBF4D69E2DFAB /* TBRongCloudIMManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 360A5BD15C2AC58A5F5CCC114B76AA6C /* Build configuration list for PBXNativeTarget "Pods-RongCloudIMManagerExample" */;
+			buildConfigurationList = F47950CED2E8136DBF45A8AA6AA2E455 /* Build configuration list for PBXNativeTarget "TBRongCloudIMManager" */;
 			buildPhases = (
-				6CB3E56463AABE0C10875CCCB742B0AE /* Sources */,
-				C25603466246B58F04E3940310F19198 /* Frameworks */,
+				7A4F1843265F13165D6F0F17D89206D0 /* Sources */,
+				71F0B3EFAFBC5D64FBCE41647E76E8BE /* Frameworks */,
+				B388033F6972F1264A5253B1576ADA39 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = TBRongCloudIMManager;
+			productName = TBRongCloudIMManager;
+			productReference = 256C1B7F3388D8D0B089043EAA51FDF7 /* libTBRongCloudIMManager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6250952F58061B56C50C151F6BAA4E42 /* Pods-RongCloudIMManagerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EF7450E8680CB8C109F3E8712E1E902 /* Build configuration list for PBXNativeTarget "Pods-RongCloudIMManagerExample" */;
+			buildPhases = (
+				1C32B19D001E92B7890C5E9B553F9B5A /* Sources */,
+				C63C3646F2744CB2035595CEF688C9BA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31540DF7E773C473C7C917024A01B4F5 /* PBXTargetDependency */,
+			);
 			name = "Pods-RongCloudIMManagerExample";
 			productName = "Pods-RongCloudIMManagerExample";
-			productReference = F923B564C39CADE3CA73CDB693212D9F /* libPods-RongCloudIMManagerExample.a */;
+			productReference = 4D1BA36E58ABA527682328942BE32458 /* libPods-RongCloudIMManagerExample.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -129,28 +340,120 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = DF5998572AE2BC1FC2E3E6447DA7EED0 /* Products */;
+			productRefGroup = 267A82B577CFAD2CE1113822AF17EECB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2B00B25A82DAA46BC025EDA404578D53 /* Pods-RongCloudIMManagerExample */,
+				6250952F58061B56C50C151F6BAA4E42 /* Pods-RongCloudIMManagerExample */,
+				2705F071F7DAFC337C2BBF4D69E2DFAB /* TBRongCloudIMManager */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6CB3E56463AABE0C10875CCCB742B0AE /* Sources */ = {
+		1C32B19D001E92B7890C5E9B553F9B5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9965CE47AB147D9ADC8C635DC36D4A1A /* Pods-RongCloudIMManagerExample-dummy.m in Sources */,
+				726E50D68FD34A656991B1B4143B2305 /* Pods-RongCloudIMManagerExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4F1843265F13165D6F0F17D89206D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25B83AC75D959A96AD0558511604024 /* MessageCommonContent.m in Sources */,
+				4AF5BAF2A7EBC2AECA2755B5990565CD /* MessageType.m in Sources */,
+				5984A77F0142FB0E35A1E332013E7ACB /* MessageTypeEstate.m in Sources */,
+				F77632B0B94FF5867CBAEBFD99062E19 /* RCTextMessage+Additions.m in Sources */,
+				1D627B5559B9D3A02D71882366435479 /* RCUserInfo+Additions.m in Sources */,
+				9A2DE577A6195A1D98B3DE61027356FD /* RongCloudIMCenterManager.m in Sources */,
+				7FD335D18AFEB2C27AF928735FD2767B /* RongCloudIMDataRequest.m in Sources */,
+				25958FD62B8866B696AB715EAFBA0C8E /* TBRongCloudIMManager-dummy.m in Sources */,
+				41F815A532A9A9F7CD1E531D95BA2D1F /* Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		31540DF7E773C473C7C917024A01B4F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TBRongCloudIMManager;
+			target = 2705F071F7DAFC337C2BBF4D69E2DFAB /* TBRongCloudIMManager */;
+			targetProxy = 2915FB4343D06A50A0F955810174CC3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		025D6F007AB6F075F0ED2575E93A49F0 /* Debug */ = {
+		0B2343592184E924899F9DF110103A73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABEDB4033DA08D4FF42DA8E89F12F588 /* TBRongCloudIMManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/TBRongCloudIMManager/TBRongCloudIMManager-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F6DDD264B38013F9D4E1126256F1803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABEDB4033DA08D4FF42DA8E89F12F588 /* TBRongCloudIMManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/TBRongCloudIMManager/TBRongCloudIMManager-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB06B6B2E76720CD6501EDE66DC654FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 443D387AC44958BF7FA2821B4F1AC1AC /* Pods-RongCloudIMManagerExample.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE6D82102648DB125B5B645881E4C468 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8FFDA80519036DD6E91D56E550F35D23 /* Pods-RongCloudIMManagerExample.debug.xcconfig */;
 			buildSettings = {
@@ -285,27 +588,6 @@
 			};
 			name = Debug;
 		};
-		EEED751F7D0679CAD99BD097A490DE07 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 443D387AC44958BF7FA2821B4F1AC1AC /* Pods-RongCloudIMManagerExample.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -318,11 +600,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		360A5BD15C2AC58A5F5CCC114B76AA6C /* Build configuration list for PBXNativeTarget "Pods-RongCloudIMManagerExample" */ = {
+		4EF7450E8680CB8C109F3E8712E1E902 /* Build configuration list for PBXNativeTarget "Pods-RongCloudIMManagerExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				025D6F007AB6F075F0ED2575E93A49F0 /* Debug */,
-				EEED751F7D0679CAD99BD097A490DE07 /* Release */,
+				AE6D82102648DB125B5B645881E4C468 /* Debug */,
+				AB06B6B2E76720CD6501EDE66DC654FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F47950CED2E8136DBF45A8AA6AA2E455 /* Build configuration list for PBXNativeTarget "TBRongCloudIMManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B2343592184E924899F9DF110103A73 /* Debug */,
+				3F6DDD264B38013F9D4E1126256F1803 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,1 @@
+../../../TBRongCloudIMManager/Source/RCTextMessage+Additions.h

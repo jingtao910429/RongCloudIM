@@ -1,0 +1,1 @@
+../../../TBRongCloudIMManager/Source/RCUserInfo+Additions.h
