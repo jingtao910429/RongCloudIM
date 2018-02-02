@@ -7,6 +7,6 @@ target 'RongCloudIMManagerExample' do
 
 #   pod 'RongCloudIMLibrary', '~> 0.0.8'
 
-pod 'TBRongCloudIMManager', '~> 0.0.6'
+#pod 'TBRongCloudIMManager', '~> 0.0.6'
 
 end

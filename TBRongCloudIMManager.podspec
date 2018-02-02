@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TBRongCloudIMManager"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "RongCloudIM‘s upper pack of TBRongCloudIMManager."
 
   s.description  = <<-DESC
@@ -15,15 +15,15 @@ Pod::Spec.new do |s|
   s.author       = "http://ta.2boss.cn"
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/jingtao910429/RongCloudIMManager.git"}
-  
+
   s.source_files = "Source/*.{h,m}"
-  s.prefix_header_contents = '#import <RongIMLib/RongIMLib.h>', '#import <RongIMKit/RongIMKit.h>'
-  
+
+  s.dependency 'RongCloudIMLibrary', '0.1.1'
+
   s.static_framework = true
   
-  s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES', 'OTHER_LINKER_FLAGS' => ['-lObjC','-all_load'] }
-  s.pod_target_xcconfig = {'OTHER_LDFLAGS' => ['-lObjC','-all_load']}
+  s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
 
-  s.dependency 'RongCloudIM/IMKit', '2.8.26'
   s.requires_arc = true
+
 end
