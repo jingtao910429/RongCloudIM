@@ -17,6 +17,21 @@
 		044ADA582021CE460012E83C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 044ADA572021CE460012E83C /* libxml2.tbd */; };
 		044ADA5A2021CE520012E83C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 044ADA592021CE520012E83C /* libc++.tbd */; };
 		044ADA5B2021CE5A0012E83C /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 044AD9E12021B5650012E83C /* libstdc++.tbd */; };
+		044ADB5E2025DE080012E83C /* TBRongCloudIMMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB3B2025DE080012E83C /* TBRongCloudIMMacro.m */; };
+		044ADB5F2025DE080012E83C /* TBRongCloudIMCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB3C2025DE080012E83C /* TBRongCloudIMCenterManager.m */; };
+		044ADB602025DE080012E83C /* TBRongCloudIMService.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB3E2025DE080012E83C /* TBRongCloudIMService.m */; };
+		044ADB622025DE080012E83C /* NSString+TBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB422025DE080012E83C /* NSString+TBAdditions.m */; };
+		044ADB632025DE080012E83C /* TBConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB482025DE080012E83C /* TBConversationListViewController.m */; };
+		044ADB642025DE080012E83C /* TBConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB492025DE080012E83C /* TBConversationViewController.m */; };
+		044ADB652025DE080012E83C /* TBMessageCommonContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB4B2025DE080012E83C /* TBMessageCommonContent.m */; };
+		044ADB662025DE080012E83C /* TBMessageTypeEstate.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB4C2025DE080012E83C /* TBMessageTypeEstate.m */; };
+		044ADB672025DE080012E83C /* TBTextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB4D2025DE080012E83C /* TBTextMessage.m */; };
+		044ADB682025DE080012E83C /* TBImageMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB532025DE080012E83C /* TBImageMessage.m */; };
+		044ADB692025DE080012E83C /* TBMessageType.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB542025DE080012E83C /* TBMessageType.m */; };
+		044ADB6A2025DE080012E83C /* TBRongCloudIMProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB552025DE080012E83C /* TBRongCloudIMProtocol.m */; };
+		044ADB6B2025DE080012E83C /* TBMessageUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB5B2025DE080012E83C /* TBMessageUserInfo.m */; };
+		044ADB6C2025DE080012E83C /* TBRongCloudIMRequestDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB5C2025DE080012E83C /* TBRongCloudIMRequestDataModel.m */; };
+		044ADB6D2025DE080012E83C /* TBExtraContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044ADB5D2025DE080012E83C /* TBExtraContentModel.m */; };
 		04C995DD202180A8000C1F58 /* RongTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C995DC202180A8000C1F58 /* RongTest.m */; };
 		3532FA0D7B13E5F1D2C6C73C /* libPods-RongCloudIMManagerExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F700FDD0485A239C37BE8B10 /* libPods-RongCloudIMManagerExample.a */; };
 /* End PBXBuildFile section */
@@ -35,6 +50,36 @@
 		044ADA552021CE3F0012E83C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		044ADA572021CE460012E83C /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		044ADA592021CE520012E83C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		044ADB392025DE080012E83C /* TBRongCloudIMCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBRongCloudIMCenterManager.h; sourceTree = "<group>"; };
+		044ADB3A2025DE080012E83C /* TBRongCloudIMMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBRongCloudIMMacro.h; sourceTree = "<group>"; };
+		044ADB3B2025DE080012E83C /* TBRongCloudIMMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBRongCloudIMMacro.m; sourceTree = "<group>"; };
+		044ADB3C2025DE080012E83C /* TBRongCloudIMCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBRongCloudIMCenterManager.m; sourceTree = "<group>"; };
+		044ADB3E2025DE080012E83C /* TBRongCloudIMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBRongCloudIMService.m; sourceTree = "<group>"; };
+		044ADB3F2025DE080012E83C /* TBRongCloudIMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBRongCloudIMService.h; sourceTree = "<group>"; };
+		044ADB422025DE080012E83C /* NSString+TBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TBAdditions.m"; sourceTree = "<group>"; };
+		044ADB442025DE080012E83C /* NSString+TBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TBAdditions.h"; sourceTree = "<group>"; };
+		044ADB462025DE080012E83C /* TBConversationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBConversationListViewController.h; sourceTree = "<group>"; };
+		044ADB472025DE080012E83C /* TBConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBConversationViewController.h; sourceTree = "<group>"; };
+		044ADB482025DE080012E83C /* TBConversationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBConversationListViewController.m; sourceTree = "<group>"; };
+		044ADB492025DE080012E83C /* TBConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBConversationViewController.m; sourceTree = "<group>"; };
+		044ADB4B2025DE080012E83C /* TBMessageCommonContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMessageCommonContent.m; sourceTree = "<group>"; };
+		044ADB4C2025DE080012E83C /* TBMessageTypeEstate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMessageTypeEstate.m; sourceTree = "<group>"; };
+		044ADB4D2025DE080012E83C /* TBTextMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTextMessage.m; sourceTree = "<group>"; };
+		044ADB4E2025DE080012E83C /* TBRongCloudIMProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBRongCloudIMProtocol.h; sourceTree = "<group>"; };
+		044ADB4F2025DE080012E83C /* TBMessageType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMessageType.h; sourceTree = "<group>"; };
+		044ADB502025DE080012E83C /* TBImageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBImageMessage.h; sourceTree = "<group>"; };
+		044ADB512025DE080012E83C /* TBMessageTypeEstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMessageTypeEstate.h; sourceTree = "<group>"; };
+		044ADB522025DE080012E83C /* TBMessageCommonContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMessageCommonContent.h; sourceTree = "<group>"; };
+		044ADB532025DE080012E83C /* TBImageMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBImageMessage.m; sourceTree = "<group>"; };
+		044ADB542025DE080012E83C /* TBMessageType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMessageType.m; sourceTree = "<group>"; };
+		044ADB552025DE080012E83C /* TBRongCloudIMProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBRongCloudIMProtocol.m; sourceTree = "<group>"; };
+		044ADB562025DE080012E83C /* TBTextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTextMessage.h; sourceTree = "<group>"; };
+		044ADB582025DE080012E83C /* TBMessageUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMessageUserInfo.h; sourceTree = "<group>"; };
+		044ADB592025DE080012E83C /* TBExtraContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBExtraContentModel.h; sourceTree = "<group>"; };
+		044ADB5A2025DE080012E83C /* TBRongCloudIMRequestDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBRongCloudIMRequestDataModel.h; sourceTree = "<group>"; };
+		044ADB5B2025DE080012E83C /* TBMessageUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMessageUserInfo.m; sourceTree = "<group>"; };
+		044ADB5C2025DE080012E83C /* TBRongCloudIMRequestDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBRongCloudIMRequestDataModel.m; sourceTree = "<group>"; };
+		044ADB5D2025DE080012E83C /* TBExtraContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBExtraContentModel.m; sourceTree = "<group>"; };
 		04AD18C71F5CE7860050B28E /* RongCloudIMManagerExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RongCloudIMManagerExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		04C995DB202180A8000C1F58 /* RongTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RongTest.h; sourceTree = "<group>"; };
 		04C995DC202180A8000C1F58 /* RongTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RongTest.m; sourceTree = "<group>"; };
@@ -80,6 +125,7 @@
 		04416B741F5CE5F1005CEBBA /* RongCloudIMManagerExample */ = {
 			isa = PBXGroup;
 			children = (
+				044ADB372025DE080012E83C /* Source */,
 				04416B751F5CE5F1005CEBBA /* AppDelegate.swift */,
 				04416B771F5CE5F1005CEBBA /* ViewController.swift */,
 				04416B791F5CE5F1005CEBBA /* Main.storyboard */,
@@ -91,6 +137,92 @@
 				04C995DC202180A8000C1F58 /* RongTest.m */,
 			);
 			path = RongCloudIMManagerExample;
+			sourceTree = "<group>";
+		};
+		044ADB372025DE080012E83C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				044ADB382025DE080012E83C /* TBRongCloudIMBase */,
+				044ADB3D2025DE080012E83C /* TBRongCloudIMService */,
+				044ADB402025DE080012E83C /* TBRongCloudIMCategory */,
+				044ADB452025DE080012E83C /* TBRongCloudIMUI */,
+				044ADB4A2025DE080012E83C /* TBRongCloudIMProtocol */,
+				044ADB572025DE080012E83C /* TBRongCloudIMModel */,
+			);
+			name = Source;
+			path = ../../../Source;
+			sourceTree = "<group>";
+		};
+		044ADB382025DE080012E83C /* TBRongCloudIMBase */ = {
+			isa = PBXGroup;
+			children = (
+				044ADB392025DE080012E83C /* TBRongCloudIMCenterManager.h */,
+				044ADB3A2025DE080012E83C /* TBRongCloudIMMacro.h */,
+				044ADB3B2025DE080012E83C /* TBRongCloudIMMacro.m */,
+				044ADB3C2025DE080012E83C /* TBRongCloudIMCenterManager.m */,
+			);
+			path = TBRongCloudIMBase;
+			sourceTree = "<group>";
+		};
+		044ADB3D2025DE080012E83C /* TBRongCloudIMService */ = {
+			isa = PBXGroup;
+			children = (
+				044ADB3E2025DE080012E83C /* TBRongCloudIMService.m */,
+				044ADB3F2025DE080012E83C /* TBRongCloudIMService.h */,
+			);
+			path = TBRongCloudIMService;
+			sourceTree = "<group>";
+		};
+		044ADB402025DE080012E83C /* TBRongCloudIMCategory */ = {
+			isa = PBXGroup;
+			children = (
+				044ADB422025DE080012E83C /* NSString+TBAdditions.m */,
+				044ADB442025DE080012E83C /* NSString+TBAdditions.h */,
+			);
+			path = TBRongCloudIMCategory;
+			sourceTree = "<group>";
+		};
+		044ADB452025DE080012E83C /* TBRongCloudIMUI */ = {
+			isa = PBXGroup;
+			children = (
+				044ADB462025DE080012E83C /* TBConversationListViewController.h */,
+				044ADB472025DE080012E83C /* TBConversationViewController.h */,
+				044ADB482025DE080012E83C /* TBConversationListViewController.m */,
+				044ADB492025DE080012E83C /* TBConversationViewController.m */,
+			);
+			path = TBRongCloudIMUI;
+			sourceTree = "<group>";
+		};
+		044ADB4A2025DE080012E83C /* TBRongCloudIMProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				044ADB4B2025DE080012E83C /* TBMessageCommonContent.m */,
+				044ADB4C2025DE080012E83C /* TBMessageTypeEstate.m */,
+				044ADB4D2025DE080012E83C /* TBTextMessage.m */,
+				044ADB4E2025DE080012E83C /* TBRongCloudIMProtocol.h */,
+				044ADB4F2025DE080012E83C /* TBMessageType.h */,
+				044ADB502025DE080012E83C /* TBImageMessage.h */,
+				044ADB512025DE080012E83C /* TBMessageTypeEstate.h */,
+				044ADB522025DE080012E83C /* TBMessageCommonContent.h */,
+				044ADB532025DE080012E83C /* TBImageMessage.m */,
+				044ADB542025DE080012E83C /* TBMessageType.m */,
+				044ADB552025DE080012E83C /* TBRongCloudIMProtocol.m */,
+				044ADB562025DE080012E83C /* TBTextMessage.h */,
+			);
+			path = TBRongCloudIMProtocol;
+			sourceTree = "<group>";
+		};
+		044ADB572025DE080012E83C /* TBRongCloudIMModel */ = {
+			isa = PBXGroup;
+			children = (
+				044ADB582025DE080012E83C /* TBMessageUserInfo.h */,
+				044ADB592025DE080012E83C /* TBExtraContentModel.h */,
+				044ADB5A2025DE080012E83C /* TBRongCloudIMRequestDataModel.h */,
+				044ADB5B2025DE080012E83C /* TBMessageUserInfo.m */,
+				044ADB5C2025DE080012E83C /* TBRongCloudIMRequestDataModel.m */,
+				044ADB5D2025DE080012E83C /* TBExtraContentModel.m */,
+			);
+			path = TBRongCloudIMModel;
 			sourceTree = "<group>";
 		};
 		0820377BAEA0029496714F93 /* Frameworks */ = {
@@ -255,9 +387,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044ADB6C2025DE080012E83C /* TBRongCloudIMRequestDataModel.m in Sources */,
+				044ADB622025DE080012E83C /* NSString+TBAdditions.m in Sources */,
+				044ADB6D2025DE080012E83C /* TBExtraContentModel.m in Sources */,
+				044ADB5F2025DE080012E83C /* TBRongCloudIMCenterManager.m in Sources */,
 				04416B781F5CE5F1005CEBBA /* ViewController.swift in Sources */,
+				044ADB652025DE080012E83C /* TBMessageCommonContent.m in Sources */,
 				04416B761F5CE5F1005CEBBA /* AppDelegate.swift in Sources */,
+				044ADB642025DE080012E83C /* TBConversationViewController.m in Sources */,
+				044ADB6B2025DE080012E83C /* TBMessageUserInfo.m in Sources */,
+				044ADB682025DE080012E83C /* TBImageMessage.m in Sources */,
+				044ADB692025DE080012E83C /* TBMessageType.m in Sources */,
+				044ADB5E2025DE080012E83C /* TBRongCloudIMMacro.m in Sources */,
 				04C995DD202180A8000C1F58 /* RongTest.m in Sources */,
+				044ADB632025DE080012E83C /* TBConversationListViewController.m in Sources */,
+				044ADB672025DE080012E83C /* TBTextMessage.m in Sources */,
+				044ADB6A2025DE080012E83C /* TBRongCloudIMProtocol.m in Sources */,
+				044ADB602025DE080012E83C /* TBRongCloudIMService.m in Sources */,
+				044ADB662025DE080012E83C /* TBMessageTypeEstate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
