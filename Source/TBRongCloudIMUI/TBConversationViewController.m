@@ -7,10 +7,8 @@
 //
 
 #import "TBConversationViewController.h"
-#import "TBTextMessage.h"
 #import "TBMessageType.h"
 #import "TBMessageTypeEstate.h"
-#import "TBImageMessage.h"
 #import "TBMessageUserInfo.h"
 
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
@@ -53,9 +51,9 @@
         
         RCUserInfo *originalUserInfo = [[RCUserInfo alloc] initWithUserId:userInfo.userId name:userInfo.name portrait:userInfo.portraitUri];
         NSString *extra = [NSString stringWithFormat:@"from=%@&fromHouseId!%@", userInfo.houseName, @(userInfo.houseId)];
-        if ([messageContent isMemberOfClass:[TBTextMessage class]]) {
+        if ([messageContent isMemberOfClass:[RCTextMessage class]]) {
             
-            TBTextMessage *textMessage = (TBTextMessage *)messageContent;
+            RCTextMessage *textMessage = (RCTextMessage *)messageContent;
             textMessage.extra = extra;
             textMessage.senderUserInfo = originalUserInfo;
             return textMessage;
@@ -74,15 +72,22 @@
             messageTypeEstate.senderUserInfo = originalUserInfo;
             return messageTypeEstate;
             
+        } else if ([messageContent isMemberOfClass:[RCImageMessage class]]) {
+            
+            RCImageMessage *imageMessage = (RCImageMessage *)messageContent;
+            imageMessage.extra = extra;
+            imageMessage.senderUserInfo = originalUserInfo;
+            return imageMessage;
+            
         }
     }
     NSLog(@"默认融云willSendMessage方法!");
     return [super willSendMessage:messageContent];
 }
 
-- (void)sendMessage:(RCMessageContent *)messageContent pushContent:(NSString *)pushContent {
+- (void)sendMediaMessage:(RCMessageContent *)messageContent pushContent:(NSString *)pushContent {
     NSLog(@"_cmd: %@",NSStringFromSelector(_cmd));
-    if ([messageContent isKindOfClass:[TBImageMessage class]]) {
+    if ([messageContent isKindOfClass:[RCImageMessage class]]) {
         TBMessageUserInfo * userInfo = nil;
         if ([self respondsToSelector:@selector(willSendMessageFetchUserInfo)]) {
             userInfo = [self performSelector:@selector(willSendMessageFetchUserInfo) withObject:nil];
@@ -93,7 +98,7 @@
             RCUserInfo *originalUserInfo = [[RCUserInfo alloc] initWithUserId:userInfo.userId name:userInfo.name portrait:userInfo.portraitUri];
             NSString *extra = [NSString stringWithFormat:@"from=%@&fromHouseId!%@", userInfo.houseName, @(userInfo.houseId)];
             
-            TBImageMessage *imageMessage = (TBImageMessage *)messageContent;
+            RCImageMessage *imageMessage = (RCImageMessage *)messageContent;
             RCImageMessage *content = [RCImageMessage messageWithImage:imageMessage.originalImage];
             content.extra = extra;
             content.senderUserInfo = originalUserInfo;
@@ -108,7 +113,6 @@
                 NSLog(@"messageId: %@",@(messageId));
             }];
         }
-        
     }
 }
 
@@ -124,17 +128,23 @@
     
     RCMessageContent *content = (RCMessageContent *)model.content;
     model.isDisplayNickname = NO;
-    model.isDisplayMessageTime = YES;
+    //model.isDisplayMessageTime = YES;
     
     if ([content isMemberOfClass:[TBMessageType class]]) {
-        if ([self respondsToSelector:@selector(chatCustomerMessageCell:)]) {
-            RCMessageCell *messageCell = [self performSelector:@selector(chatCustomerMessageCell:) withObject:@(MessageType)];
+        if ([self respondsToSelector:@selector(chatCustomerMessageCell:indexPath:)]) {
+            RCMessageCell *messageCell = [self performSelector:@selector(chatCustomerMessageCell:indexPath:) withObject:@"MessageType" withObject:indexPath];
+            if (messageCell == nil) {
+                return [super rcConversationCollectionView:collectionView cellForItemAtIndexPath:indexPath];
+            }
             [self actionWithMessageCell:messageCell model:model];
             return messageCell;
         }
     } else if ([content isMemberOfClass:[TBMessageTypeEstate class]]) {
-        if ([self respondsToSelector:@selector(chatCustomerMessageCell:)]) {
-            RCMessageCell *messageCell = [self performSelector:@selector(chatCustomerMessageCell:) withObject:@(MessageTypeEstate)];
+        if ([self respondsToSelector:@selector(chatCustomerMessageCell:indexPath:)]) {
+            RCMessageCell *messageCell = [self performSelector:@selector(chatCustomerMessageCell:indexPath:) withObject:@"MessageTypeEstate" withObject:indexPath];
+            if (messageCell == nil) {
+                return [super rcConversationCollectionView:collectionView cellForItemAtIndexPath:indexPath];
+            }
             [self actionWithMessageCell:messageCell model:model];
             return messageCell;
         }

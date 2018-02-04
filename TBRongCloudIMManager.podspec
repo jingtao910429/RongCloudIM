@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TBRongCloudIMManager"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "RongCloudIM‘s upper pack of TBRongCloudIMManager."
 
   s.description  = <<-DESC

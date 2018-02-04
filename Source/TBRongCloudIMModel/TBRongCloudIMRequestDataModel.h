@@ -25,6 +25,6 @@
 @property (nonatomic, strong) RCMessageContent *content;
 @property (nonatomic, copy)   NSString *pushContent;
 @property (nonatomic, copy)   NSString *pushData;
-@property (nonatomic, strong)   RCUserInfo *userInfo;
+@property (nonatomic, strong) RCUserInfo *userInfo;
 
 @end

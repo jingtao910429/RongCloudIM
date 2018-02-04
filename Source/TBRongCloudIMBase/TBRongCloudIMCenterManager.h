@@ -28,6 +28,7 @@
 @property (nonatomic, copy) SendMessageToServer sendMessageToServer;
 @property (nonatomic, copy) ChatProtocolAnalysisResult chatProtocolAnalysisResult;
 
+- (void)setDeviceToken:(NSString *)deviceToken;
 //消息配置
 - (void)configWithAppKey:(NSString *)key;
 //断开与融云服务器的连接，但仍然接收远程推送
@@ -47,9 +48,14 @@
 - (void)refreshRongCloudUserInfo:(TBMessageUserInfo *)userInfo;
 - (NSInteger)getUnReadMessageCount;
 
+//获取当前SDK的连接状态
+- (RCConnectionStatus)getConnectionStatus;
+
 #pragma mark - RCIMUserInfoDataSource
 
 - (void)getUserInfoWithUserId:(NSString *)userId completion:(void (^)(RCUserInfo *))completion;
+- (void)chatProtocolAnalysis:(NSString *)targetId conversationModel:(RCConversationModel *)conversationModel;
+- (void)protocolAnalysis:(NSString *)targetId content:(RCMessageContent *)content successBlock:(void (^)(void))successBlock error:(void (^)(NSError *))errorBlock;
 - (void)pushChat:(NSString *)userId chat:(TBConversationViewController *)chat;
 
 #pragma mark - Message About

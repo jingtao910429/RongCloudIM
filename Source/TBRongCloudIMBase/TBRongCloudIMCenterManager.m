@@ -9,8 +9,6 @@
 #import "TBRongCloudIMCenterManager.h"
 #import "TBMessageType.h"
 #import "TBMessageTypeEstate.h"
-#import "TBTextMessage.h"
-#import "TBImageMessage.h"
 #import "TBRongCloudIMMacro.h"
 #import "TBRongCloudIMService.h"
 #import "TBConversationViewController+ConversationAdditions.h"
@@ -38,7 +36,7 @@
         completion(nil);
     } else {
         if (self.userInfoDataSourceResult != nil) {
-            self.userInfoDataSourceResult(self, completion);
+            self.userInfoDataSourceResult(userId, completion);
         }
     }
 }
@@ -62,7 +60,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             if (self.receiveMessageBlock) {
                 NSInteger count = [[RCIMClient sharedRCIMClient] getTotalUnreadCount];
-                self.receiveMessageBlock(count);
+                self.receiveMessageBlock(count, message);
             }
         });
     }
@@ -70,14 +68,16 @@
 
 #pragma mark - Result Config
 
+- (void)setDeviceToken:(NSString *)deviceToken {
+    [[RCIMClient sharedRCIMClient] setDeviceToken:deviceToken];
+}
+
 //消息配置
 - (void)configWithAppKey:(NSString *)key {
     RCIM *shared = [RCIM sharedRCIM];
     [shared initWithAppKey:key];
     [shared registerMessageType:[TBMessageType class]];
     [shared registerMessageType:[TBMessageTypeEstate class]];
-    [shared registerMessageType:[TBTextMessage class]];
-    [shared registerMessageType:[TBImageMessage class]];
     [shared setGlobalMessageAvatarStyle:RC_USER_AVATAR_CYCLE];
     [shared setEnablePersistentUserInfoCache:YES];
     [shared setEnableTypingStatus:YES];
@@ -129,6 +129,14 @@
 
 #pragma mark - Message About
 
+- (NSInteger)getUnReadMessageCount {
+    return [[RCIMClient sharedRCIMClient] getTotalUnreadCount];
+}
+
+- (RCConnectionStatus)getConnectionStatus {
+    return [[RCIM sharedRCIM] getConnectionStatus];
+}
+
 - (void)sendContentMessage:(RCMessageContent *)contentMessage userInfo:(TBMessageUserInfo *)userInfo targetId:(NSString *)targetId successBlock:(SendMessageSuccessBlock)successBlock error:(SendMessageErrorBlock)errorBlock {
     
     TBRongCloudIMRequestDataModel *requestData = [[TBRongCloudIMRequestDataModel alloc] init];
@@ -166,10 +174,6 @@
     [_service chatProtocolAnalysis:targetId conversationModel:conversationModel];
 }
 
-- (NSInteger)getUnReadMessageCount {
-    return [[RCIMClient sharedRCIMClient] getTotalUnreadCount];
-}
-
 - (void)refreshRongCloudUserInfo:(TBMessageUserInfo *)userInfo {
     if ([[RCIM sharedRCIM] currentUserInfo] != nil) {
         RCUserInfo *currentUserInfo = [[RCIM sharedRCIM] currentUserInfo];
@@ -180,7 +184,7 @@
             currentUserInfo.name = @"";
             currentUserInfo.portraitUri = @"";
         }
-        currentUserInfo.userId = userInfo.targetId;
+        currentUserInfo.userId = userInfo.userId;
         [[RCIM sharedRCIM] refreshUserInfoCache:currentUserInfo withUserId:currentUserInfo.userId];
     } else {
         NSLog(@"当前UserInfo为空!");

@@ -9,8 +9,6 @@
 #import "TBRongCloudIMService.h"
 #import "TBMessageType.h"
 #import "TBMessageTypeEstate.h"
-#import "TBTextMessage.h"
-#import "TBImageMessage.h"
 #import "TBExtraContentModel.h"
 
 @implementation TBRongCloudIMService
@@ -31,9 +29,9 @@
             NSString *encode = [[NSString alloc] initWithData:content.encode encoding:NSUTF8StringEncoding];
             self.baseProtocolAnalysisResult(targetId, encode, messageType.house_id, messageType.house_name);
         }
-    } else if ([content isKindOfClass:[TBTextMessage class]]) {
+    } else if ([content isKindOfClass:[RCTextMessage class]]) {
         //系统RCTextMessage文本消息类型
-        TBTextMessage *textMessage = (TBTextMessage *)content;
+        RCTextMessage *textMessage = (RCTextMessage *)content;
         TBExtraContentModel *model = [self analysisExtraContent:textMessage.extra];
         if (model == nil) {
             NSLog(@"解析TextMessage extra内容解析失败，请查看具体原因!");
@@ -54,8 +52,8 @@
     model.houseId = 0;
     model.houseName = @"";
     
-    if ([conversationModel.lastestMessage isKindOfClass:[TBTextMessage class]]) {
-        TBTextMessage *textMessage = (TBTextMessage *)conversationModel.lastestMessage;
+    if ([conversationModel.lastestMessage isKindOfClass:[RCTextMessage class]]) {
+        RCTextMessage *textMessage = (RCTextMessage *)conversationModel.lastestMessage;
         model = [self chatAnalysisExtraContent:textMessage.extra];
     } else if ([conversationModel.lastestMessage isKindOfClass:[TBMessageTypeEstate class]]) {
         TBMessageTypeEstate *messageTypeEstate = (TBMessageTypeEstate *)conversationModel.lastestMessage;
@@ -63,8 +61,8 @@
     } else if ([conversationModel.lastestMessage isKindOfClass:[TBMessageType class]]) {
         TBMessageType *messageType = (TBMessageType *)conversationModel.lastestMessage;
         model = [self chatAnalysisExtraContent:messageType.extra];
-    } else if ([conversationModel.lastestMessage isKindOfClass:[TBImageMessage class]]) {
-        TBImageMessage *imageMessage = (TBImageMessage *)conversationModel.lastestMessage;
+    } else if ([conversationModel.lastestMessage isKindOfClass:[RCImageMessage class]]) {
+        RCImageMessage *imageMessage = (RCImageMessage *)conversationModel.lastestMessage;
         model = [self chatAnalysisExtraContent:imageMessage.extra];
     }
     

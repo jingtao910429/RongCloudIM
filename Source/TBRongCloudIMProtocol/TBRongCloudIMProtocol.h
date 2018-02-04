@@ -17,6 +17,7 @@
 @class RCConversationBaseCell;
 @class RCConversationModel;
 @class RCUserInfo;
+@class RCMessage;
 
 typedef NS_ENUM(NSInteger, TBChatMessageCellType) {
     MessageType = 0,
@@ -34,12 +35,12 @@ typedef void (^SendMessageErrorBlock)(RCErrorCode errorCode, long messageId);
 //消息管理相关回调
 //#pragma mark - RCIMUserInfoDataSource 相关回调
 typedef void (^UserInfoDataSourceResultCompletion)(RCUserInfo *);
-typedef void (^UserInfoDataSourceResult)(TBRongCloudIMCenterManager *, UserInfoDataSourceResultCompletion);
+typedef void (^UserInfoDataSourceResult)(NSString *, UserInfoDataSourceResultCompletion);
 //#pragma mark - RCIMConnectionStatusDelegate 相关回调
 typedef void (^ConnectionStatusBlock)(RCConnectionStatus status);
 typedef void (^ConnectionOffLineBlock)(void);
 //#pragma mark - RCIMReceiveMessageDelegate 相关回调
-typedef void (^ReceiveMessageBlock)(NSInteger totalUnreadCount);
+typedef void (^ReceiveMessageBlock)(NSInteger totalUnreadCount, RCMessage *message);
 typedef void (^SendMessageToServer)(NSString *targetId, NSString *content, NSInteger houseId, NSString *houseName);
 
 //协议解析回调
@@ -48,11 +49,10 @@ typedef void (^BaseProtocolAnalysisResult)(NSString *targetId, NSString *content
 typedef void (^ChatProtocolAnalysisResult)(TBExtraContentModel *model);
 
 //UI相关协议, 获取数据及交互使用
-@protocol TBConversationViewControllerDelagate <NSObject>
-
-@optional
+@protocol TBConversationViewControllerProtocol <NSObject>
 
 @required
+@optional
 //willSendMessage获取所需数据
 - (TBMessageUserInfo *)willSendMessageFetchUserInfo;
 
@@ -61,10 +61,17 @@ typedef void (^ChatProtocolAnalysisResult)(TBExtraContentModel *model);
 - (UIImage *)willDisplayMessageCellTextRecived;
 
 //Cell定制
-- (RCMessageCell *)chatCustomerMessageCell:(TBChatMessageCellType)type;
-- (RCConversationBaseCell *)listCustomerMessageCell:(TBListMessageCellType)type model:(RCConversationModel *)model;
+- (RCMessageCell *)chatCustomerMessageCell:(NSString *)type indexPath:(NSIndexPath *)indexPath;
 
+@end
+
+@protocol TBConversationListViewControllerProtocol <NSObject>
+
+@required
+@optional
+- (RCConversationBaseCell *)listCustomerMessageCell:(NSString *)type model:(RCConversationModel *)model;
 - (NSMutableArray *)listWillReloadTableData:(NSMutableArray *)dataSource targetIdArray:(NSArray *)targetIdArray;
+
 @end
 
 @interface TBRongCloudIMProtocol : NSObject
