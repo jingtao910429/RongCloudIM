@@ -10,6 +10,7 @@
 #import "TBRongCloudIMProtocol.h"
 #import "TBRongCloudIMRequestDataModel.h"
 #import "TBMessageUserInfo.h"
+#import "TBConversationViewController.h"
 #import <RongIMLib/RongIMLib.h>
 #import <RongIMKit/RongIMKit.h>
 
@@ -25,6 +26,7 @@
 @property (nonatomic, copy) ConnectionOffLineBlock connectionOffLineBlock;
 @property (nonatomic, copy) ReceiveMessageBlock receiveMessageBlock;
 @property (nonatomic, copy) SendMessageToServer sendMessageToServer;
+@property (nonatomic, copy) ChatProtocolAnalysisResult chatProtocolAnalysisResult;
 
 //消息配置
 - (void)configWithAppKey:(NSString *)key;
@@ -32,7 +34,6 @@
 - (void)disconnect;
 //断开与融云服务器的连接，并不再接收远程推送
 - (void)logOut;
-
 //消息连接
 - (void)connectWithRequestData:(TBRongCloudIMRequestDataModel *)requestData successBlock:(void (^)(NSString *userId))successBlock;
 
@@ -47,5 +48,12 @@
 - (NSInteger)getUnReadMessageCount;
 
 #pragma mark - RCIMUserInfoDataSource
+
 - (void)getUserInfoWithUserId:(NSString *)userId completion:(void (^)(RCUserInfo *))completion;
+- (void)pushChat:(NSString *)userId chat:(TBConversationViewController *)chat;
+
+#pragma mark - Message About
+
+- (void)sendTextMessage:(RCTextMessage *)textMessage userInfo:(TBMessageUserInfo *)userInfo targetId:(NSString *)targetId successBlock:(SendMessageSuccessBlock)successBlock error:(SendMessageErrorBlock)errorBlock;
+- (void)sendMessageWithRequestData:(TBRongCloudIMRequestDataModel *)dataRequest successBlock:(SendMessageSuccessBlock)successBlock error:(SendMessageErrorBlock)errorBlock;
 @end

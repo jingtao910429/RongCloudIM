@@ -13,6 +13,7 @@
 #import "TBImageMessage.h"
 #import "TBRongCloudIMMacro.h"
 #import "TBRongCloudIMService.h"
+#import "TBConversationViewController+ConversationAdditions.h"
 
 @interface TBRongCloudIMCenterManager () <RCIMUserInfoDataSource, RCIMConnectionStatusDelegate, RCIMReceiveMessageDelegate>
 @property (nonatomic, strong) TBRongCloudIMService *service;
@@ -112,7 +113,7 @@
     }];
 }
 
-#pragma mark - 清除Cache
+#pragma mark - Cache About
 
 - (void)refreshUserInfoCache:(TBMessageUserInfo *)userInfo {
     [[RCIM sharedRCIM] refreshUserInfoCache:userInfo withUserId:userInfo.targetId];
@@ -158,7 +159,9 @@
     
     _service = [[TBRongCloudIMService alloc] init];
     _service.chatProtocolAnalysisResult = ^(TBExtraContentModel *model) {
-        
+        if (weakSelf.chatProtocolAnalysisResult) {
+            weakSelf.chatProtocolAnalysisResult(model);
+        }
     };
     [_service chatProtocolAnalysis:targetId conversationModel:conversationModel];
 }
@@ -182,6 +185,23 @@
     } else {
         NSLog(@"当前UserInfo为空!");
     }
+}
+
+- (void)pushChat:(NSString *)userId chat:(TBConversationViewController *)chat {
+    
+    //清除某个会话中的未读消息数
+    [[RCIMClient sharedRCIMClient] clearMessagesUnreadStatus:ConversationType_PRIVATE targetId:userId];
+    
+    __weak typeof(self) weakSelf = self;
+    [self getUserInfoWithUserId:userId completion:^(RCUserInfo *userInfo) {
+        if (userInfo != nil) {
+            chat.title = userInfo.name;
+            if (userInfo.portraitUri != nil) {
+                chat.avatarUrl = userInfo.portraitUri;
+            }
+            [[[weakSelf currentViewController:chat] navigationController] pushViewController:chat animated:YES];
+        }
+    }];
 }
 
 #pragma mark - private methods
@@ -220,7 +240,20 @@
     
 }
 
-#pragma mark - Getters & Setters
+- (UIViewController *)currentViewController:(UIViewController *)base {
+    if ([base isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *nav = (UINavigationController *)base;
+        return [self currentViewController:nav.visibleViewController];
+    }
+    if ([base isKindOfClass:[UITabBarController class]]) {
+        UITabBarController *tab = (UITabBarController *)base;
+        return [self currentViewController:tab.selectedViewController];
+    }
+    if (base.presentedViewController != nil) {
+        return [self currentViewController:base.presentedViewController];
+    }
+    return base;
+}
 
 
 @end

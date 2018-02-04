@@ -53,7 +53,6 @@ typedef void (^ChatProtocolAnalysisResult)(TBExtraContentModel *model);
 @optional
 
 @required
-
 //willSendMessage获取所需数据
 - (TBMessageUserInfo *)willSendMessageFetchUserInfo;
 
