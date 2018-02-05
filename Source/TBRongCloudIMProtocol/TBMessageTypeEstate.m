@@ -26,7 +26,6 @@
     [dataDict setValue:@(self.pubType) forKey:@"pubType"];
     [dataDict setValue:@(self.houseType) forKey:@"houseType"];
     [dataDict setValue:self.is_first forKey:@"is_first"];
-    [dataDict setValue:self.is_first forKey:@"is_first"];
     [dataDict setValue:self.extra forKey:@"extra"];
     [dataDict setValue:self.estateDetailUrl forKey:@"estateDetailUrl"];
     [dataDict setValue:self.user forKey:@"user"];
@@ -51,6 +50,8 @@
     self.is_first        = dataDict[@"is_first"];
     self.extra           = dataDict[@"extra"];
     self.estateDetailUrl    = dataDict[@"estateDetailUrl"];
+    self.pubType         = [dataDict[@"pubType"] integerValue];
+    self.houseType       = [dataDict[@"houseType"] integerValue];
     self.user            = [NSDictionary dictionaryWithDictionary:dataDict[@"user"]];
     
 }
