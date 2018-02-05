@@ -10,6 +10,14 @@
 
 @implementation TBMessageTypeEstate
 
+- (instancetype)init {
+    if (self = [super init]) {
+        self.pubType = -1;
+        self.houseType = -1;
+    }
+    return self;
+}
+
 - (NSData *)encode {
     
     NSMutableDictionary *dataDict = [NSMutableDictionary dictionaryWithCapacity:20];
