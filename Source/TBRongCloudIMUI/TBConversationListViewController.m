@@ -87,7 +87,7 @@
     if ([self respondsToSelector:@selector(listCustomerMessageCell:model:)]) {
         RCConversationBaseCell *baseCell = [self performSelector:@selector(listCustomerMessageCell:model:) withObject:@"ConversationBase" withObject:conversationModel];
         if (self.userInfoDataSourceResultCompletion != nil) {
-            [[TBRongCloudIMCenterManager manager] getUserInfoWithUserId:conversationModel.targetId completion:self.userInfoDataSourceResultCompletion];
+            [[TBRongCloudIMCenterManager sharedManager] getUserInfoWithUserId:conversationModel.targetId completion:self.userInfoDataSourceResultCompletion];
         }
         return baseCell;
     }
@@ -108,7 +108,7 @@
             weakSelf.baseProtocolAnalysisResult(targetId, content, houseId, houseName);
         }
         if (weakSelf.userInfoDataSourceResultCompletion != nil) {
-            [[TBRongCloudIMCenterManager manager] getUserInfoWithUserId:conversationModel.targetId completion:weakSelf.userInfoDataSourceResultCompletion];
+            [[TBRongCloudIMCenterManager sharedManager] getUserInfoWithUserId:conversationModel.targetId completion:weakSelf.userInfoDataSourceResultCompletion];
         }
     };
     [service baseProtocolAnalysis:conversationModel.targetId content:conversationModel.lastestMessage];

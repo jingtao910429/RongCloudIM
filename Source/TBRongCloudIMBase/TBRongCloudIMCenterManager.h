@@ -19,7 +19,7 @@
  */
 @interface TBRongCloudIMCenterManager : NSObject
 
-+ (instancetype)manager;
++ (instancetype)sharedManager;
 
 @property (nonatomic, copy) UserInfoDataSourceResult userInfoDataSourceResult;
 @property (nonatomic, copy) ConnectionStatusBlock connectionStatusBlock;

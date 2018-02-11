@@ -19,7 +19,7 @@
 
 @implementation TBRongCloudIMCenterManager
 
-+ (instancetype)manager {
++ (instancetype)sharedManager {
     static id _shared;
     static dispatch_once_t onceInstance;
     dispatch_once(&onceInstance, ^{
